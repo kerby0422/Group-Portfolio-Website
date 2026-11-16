@@ -15,10 +15,22 @@ $images = get_stylesheet_directory_uri() . '/assets/images/';
 $projects = array(
     array(
         'number' => '01',
-        'title' => 'OurSpace',
+        'title' => 'DEVHUB Group Portfolio',
         'category' => 'Group Project',
         'type' => 'group',
-        'description' => 'A collaborative group portfolio website designed to introduce our members, showcase our skills, and present our creative and technical projects in one platform.',
+        'description' => 'The DEVHUB Group Portfolio brings the team’s member profiles and project work together in a shared WordPress website.',
+        'objective' => 'Create a central portfolio where visitors can learn about the four members, their areas of work, and the group’s projects.',
+        'focus' => 'Present member information and project work in one organized, accessible website.',
+        'approach' => 'A WordPress theme using PHP templates, HTML, and CSS to organize and display the group’s portfolio content.',
+        'features' => array('Member profiles and individual portfolio links', 'Project collection with group and individual work', 'Skills and background information organized for visitors'),
+        'status' => 'In development; portfolio content and pages continue to be refined.',
+        'learning' => 'The team is applying web development, content organization, requirements analysis, and project coordination while learning to keep a shared website clear and consistent.',
+        'contributions' => array(
+            array('member' => 'Kerby Talara', 'role' => 'Programmer / Web Developer', 'contribution' => 'Developed the WordPress theme and PHP page templates and worked on the presentation of the portfolio content.'),
+            array('member' => 'Claire Justine Cabilao', 'role' => 'Technical Writer', 'contribution' => 'Organized website information and refined descriptions to communicate project details clearly and consistently.'),
+            array('member' => 'Ann Jelie Dalde', 'role' => 'System Analyst', 'contribution' => 'Identified visitor information needs and helped organize the website requirements and content.'),
+            array('member' => 'Dhelay Mae Laid', 'role' => 'Project Manager', 'contribution' => 'Coordinated group tasks and project activities and monitored progress toward the website goals.'),
+        ),
         'technologies' => array('HTML', 'CSS', 'PHP', 'WordPress'),
         'image' => 'our.png',
         'year' => '2026',
@@ -26,33 +38,66 @@ $projects = array(
     ),
     array(
         'number' => '02',
-        'title' => 'SmartCap Alert',
-        'category' => 'Group Project',
+        'title' => 'Pet Adoption Application',
+        'category' => 'Mobile Application',
         'type' => 'group',
-        'description' => 'An IoT-based medicine container prototype that monitors container activity and provides medication reminders through connected electronic components.',
-        'technologies' => array('ESP32', 'Arduino IDE', 'Blynk', 'IoT'),
-        'image' => 'smartcap.jpg',
-        'year' => '2026',
-        'featured' => true
-    ),
-    array(
-        'number' => '03',
-        'title' => 'AgriSense',
-        'category' => 'Group Project',
-        'type' => 'group',
-        'description' => 'A smart irrigation project concept that uses sensors and an ESP32 microcontroller to support automated plant watering and help manage water usage.',
-        'technologies' => array('ESP32', 'Sensors', 'Arduino IDE', 'IoT'),
-        'image' => 'agrisense.jpg',
+        'description' => 'A mobile application that helps prospective adopters discover pets and start the adoption process.',
+        'objective' => 'Help connect pets in need of homes with prospective adopters through an accessible adoption application.',
+        'focus' => 'Present clear pet profiles and provide a straightforward way to submit and follow adoption applications.',
+        'approach' => 'Build a mobile adoption experience with React Native and a Laravel backend for pet listings and adoption applications.',
+        'features' => array('Browse pet profiles with photos and details', 'Explore available pets', 'Submit adoption applications', 'Follow application progress'),
+        'status' => 'In Progress; application development and refinement are ongoing.',
+        'learning' => 'The project focuses on designing a clear mobile experience and organizing the information needed to support pet listings and adoption applications.',
+        'contributions' => array(
+            array('member' => 'Kerby Talara', 'role' => 'Programmer / Web Developer', 'contribution' => 'Contributed to building the mobile application with Laravel and React Native.'),
+            array('member' => 'Claire Justine Cabilao', 'role' => 'Technical Writer', 'contribution' => 'Organized project information to explain the application and its adoption process.'),
+            array('member' => 'Ann Jelie Dalde', 'role' => 'System Analyst', 'contribution' => 'Helped outline user needs and requirements for pet listings and adoption applications.'),
+            array('member' => 'Dhelay Mae Laid', 'role' => 'Project Manager', 'contribution' => 'Helped coordinate tasks and monitor progress during application development.'),
+        ),
+        'technologies' => array('Laravel', 'React Native'),
+        'image' => 'app.jpeg',
         'year' => '2026',
         'featured' => false
     ),
     array(
+        'number' => '03',
+        'title' => 'PTA Accounting and Membership System',
+        'category' => 'Group Project',
+        'type' => 'group',
+        'description' => 'A responsive web-based system for managing PTA membership, student and guardian information, contributions, and school-related records at Alubijid National Comprehensive High School.',
+        'objective' => 'Improve the organization, accuracy, transparency, and monitoring of PTA membership records and funds.',
+        'focus' => 'Provide role-based access and a clear view of membership, contributions, financial activity, and announcements.',
+        'approach' => 'Develop a responsive management interface with a dashboard and core tools for membership, contributions, finances, announcements, and reports.',
+        'features' => array('Dashboard overview of students, guardians, collections, expenses, and available funds', 'Membership and contribution management', 'Financial records, announcements, and reports with role-based access'),
+        'status' => 'In Progress; the dashboard and core management interface have been developed, with further functionality, testing, and refinement ongoing.',
+        'learning' => 'The project focuses on organizing records and financial activity clearly, supporting role-based access, and refining the system through continued development and testing.',
+        'contributions' => array(
+            array('member' => 'Kerby Talara', 'role' => 'Programmer / Web Developer', 'contribution' => 'Developed the responsive system interface and core management features.'),
+            array('member' => 'Claire Justine Cabilao', 'role' => 'Technical Writer', 'contribution' => 'Helped organize and explain the system purpose, features, and records.'),
+            array('member' => 'Ann Jelie Dalde', 'role' => 'System Analyst', 'contribution' => 'Helped define system requirements for membership, contributions, and financial monitoring.'),
+            array('member' => 'Dhelay Mae Laid', 'role' => 'Project Manager', 'contribution' => 'Supported task organization, team coordination, and progress monitoring during development.'),
+        ),
+        'technologies' => array('Laravel', 'Inertia', 'React'),
+        'image' => 'alub.png',
+        'year' => '2026',
+        'featured' => true
+    ),
+    array(
         'number' => '04',
-        'title' => 'Soil Moisture Monitoring',
-        'category' => 'Individual Project',
+        'title' => 'ESP32 Experiments',
+        'category' => 'Individual Experiments',
         'type' => 'individual',
-        'description' => 'An ESP32-based monitoring project that reads soil moisture levels and displays the sensor readings through the Blynk IoT platform, with LED status indication.',
-        'technologies' => array('ESP32', 'Soil Sensor', 'Blynk', 'Arduino IDE'),
+        'description' => 'Kerby Talara’s individual hands-on experiments explore ESP32 boards, sensors, displays, indicators, and connected IoT applications.',
+        'objective' => 'Build practical familiarity with ESP32 hardware and explore how sensors and output components can be used in small experiments.',
+        'focus' => 'Individual practice with sensor readings, visual indicators, displays, and connectivity.',
+        'approach' => 'Separate experiments use an ESP32 with components such as a DHT22, LCD, LED indicators, and soil-moisture sensor, with Wi-Fi and Blynk connectivity explored where applicable.',
+        'features' => array('DHT22 temperature and humidity monitoring', 'LCD display and LED status indicator experiments', 'Soil-moisture monitoring experiments', 'Wi-Fi and Blynk connectivity exploration'),
+        'status' => 'Ongoing individual experiments; these are learning exercises, not one claimed finished system.',
+        'learning' => 'The experiments provide practice connecting components, reading sensor data, presenting output, and exploring connectivity. Each setup is treated as an individual learning exercise.',
+        'contributions' => array(
+            array('member' => 'Kerby Talara', 'role' => 'Programmer / Web Developer', 'contribution' => 'Carried out the ESP32 experiments, practicing component connections and exploring sensor-based applications.'),
+        ),
+        'technologies' => array('ESP32', 'C++', 'Arduino IDE', 'Blynk'),
         'image' => 'esp32.jpg',
         'year' => '2026',
         'featured' => false
@@ -73,7 +118,7 @@ $projects = array(
 
                 <div class="projects-eyebrow">
                     <span class="projects-status-dot"></span>
-                    OURSPACE / DEVELOPMENT PORTFOLIO
+                    DEVHUB / DEVELOPMENT PORTFOLIO
                 </div>
 
                 <div class="projects-hero-index">
@@ -121,7 +166,7 @@ $projects = array(
                             <span></span>
                         </div>
 
-                        <span>ourspace.dev</span>
+                        <span>devhub.dev</span>
 
                         <span class="code-window-status">● ONLINE</span>
                     </div>
@@ -142,7 +187,7 @@ $projects = array(
                         <div class="code-line indent-more">
                             <span class="code-line-number">03</span>
                             <span class="code-orange">name:</span>
-                            <span class="code-green">'OurSpace'</span>
+                            <span class="code-green">'DEVHUB Group Portfolio'</span>
                         </div>
 
                         <div class="code-line indent-more">
@@ -225,7 +270,7 @@ $projects = array(
                 </p>
 
                 <div class="projects-intro-bottom">
-                    <span>OURSPACE CREATIVE TEAM</span>
+                    <span>DEVHUB CREATIVE TEAM</span>
                     <span>01 — 04 / PROJECT COLLECTION</span>
                 </div>
 
@@ -256,6 +301,7 @@ $projects = array(
                 <p>
                     Explore our collaborative developments,
                     personal experiments, and technology-based creations.
+                    Open a project brief for its objective, features, technical approach, current status, and member contributions.
                 </p>
 
             </div>
@@ -309,16 +355,21 @@ $projects = array(
             <div class="projects-grid">
 
                 <?php foreach ($projects as $project) : ?>
+                    <?php
+                    $is_app_image = $project['image'] === 'app.jpeg';
+                    $is_showcase_image = $is_app_image || $project['image'] === 'alub.png';
+                    ?>
 
                     <article
                         class="project-card"
                         data-category="<?php echo esc_attr($project['type']); ?>"
                     >
 
-                        <div class="project-image">
+                        <div class="project-image<?php echo $is_showcase_image ? ' project-image-showcase' : ''; ?><?php echo $is_app_image ? ' project-image-app' : ''; ?>">
 
                             <img
                                 src="<?php echo esc_url($images . $project['image']); ?>"
+                                class="<?php echo $is_showcase_image ? 'project-image-contain' : ''; ?>"
                                 alt="<?php echo esc_attr($project['title']); ?> project preview"
                                 loading="lazy"
                             >
@@ -385,8 +436,53 @@ $projects = array(
 
                             </div>
 
+                            <details class="project-brief">
+                                <summary>View project brief <span aria-hidden="true">+</span></summary>
+                                <div class="project-brief-content">
+                                    <div>
+                                        <h4>Project objective</h4>
+                                        <p><?php echo esc_html($project['objective']); ?></p>
+                                    </div>
+                                    <div>
+                                        <h4>Project focus</h4>
+                                        <p><?php echo esc_html($project['focus']); ?></p>
+                                    </div>
+                                    <div>
+                                        <h4>Key features / areas explored</h4>
+                                        <ul class="project-contributions">
+                                            <?php foreach ($project['features'] as $feature) : ?>
+                                                <li><span><?php echo esc_html($feature); ?></span></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4>Technical approach</h4>
+                                        <p><?php echo esc_html($project['approach']); ?></p>
+                                    </div>
+                                    <div>
+                                        <h4>Project status</h4>
+                                        <p><?php echo esc_html($project['status']); ?></p>
+                                    </div>
+                                    <div>
+                                        <h4>Member contributions</h4>
+                                        <ul class="project-contributions">
+                                            <?php foreach ($project['contributions'] as $contribution) : ?>
+                                                <li>
+                                                    <strong><?php echo esc_html($contribution['member']); ?> — <?php echo esc_html($contribution['role']); ?></strong>
+                                                    <span><?php echo esc_html($contribution['contribution']); ?></span>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4>Challenges and learning outcomes</h4>
+                                        <p><?php echo esc_html($project['learning']); ?></p>
+                                    </div>
+                                </div>
+                            </details>
+
                             <div class="project-card-footer">
-                                <span>OURSPACE PROJECT ARCHIVE</span>
+                                <span>DEVHUB PROJECT ARCHIVE</span>
                                 <span class="project-footer-line"></span>
                             </div>
 
@@ -452,9 +548,9 @@ $projects = array(
                     <h3>Discover</h3>
 
                     <p>
-                        Explore ideas, identify problems, and
-                        understand the goals and requirements
-                        of each project.
+                        Research the topic, identify the problem,
+                        define requirements, and agree on practical
+                        goals and a plan before development begins.
                     </p>
 
                     <div class="process-bottom">
@@ -474,9 +570,9 @@ $projects = array(
                     <h3>Build</h3>
 
                     <p>
-                        Turn concepts into working outputs using
-                        appropriate programming languages,
-                        tools, and technologies.
+                        Use the project plan to develop an implementation
+                        with suitable tools and technologies, keeping
+                        the intended requirements in view.
                     </p>
 
                     <div class="process-bottom">
@@ -496,9 +592,9 @@ $projects = array(
                     <h3>Test & Improve</h3>
 
                     <p>
-                        Evaluate functionality, identify issues,
-                        and refine the project to improve
-                        its overall performance.
+                        Test what has been built against its goals,
+                        review issues and limitations, and use the
+                        findings to guide improvements.
                     </p>
 
                     <div class="process-bottom">
@@ -520,7 +616,7 @@ $projects = array(
         <div class="projects-container projects-closing-content">
 
             <div class="projects-closing-decoration">
-                OURSPACE
+                DEVHUB
             </div>
 
             <span class="projects-label">
@@ -546,10 +642,7 @@ $projects = array(
                 <span>↗</span>
             </a>
 
-            <div class="projects-closing-footer">
-                <span>OURSPACE / CREATIVE PORTFOLIO</span>
-                <a href="#projects-top">BACK TO TOP ↑</a>
-            </div>
+           
 
         </div>
 
@@ -561,7 +654,7 @@ $projects = array(
 <style>
 
 /* ========================================
-   OURSPACE DEVELOPER PROJECTS
+   DEVHUB GROUP PORTFOLIO — PROJECTS
 ======================================== */
 
 .our-projects-page {
@@ -569,13 +662,13 @@ $projects = array(
     --project-dark: #1c1c1c;
     --project-orange: #f97316;
     --project-orange-dark: #ea580c;
-    --project-cream: #f5f3ef;
+    --project-cream: #171717;
     --project-white: #ffffff;
     --project-gray: #777777;
-    --project-border: #e5e1db;
+    --project-border: #383838;
 
-    background: var(--project-cream);
-    color: var(--project-black);
+    background: var(--project-black);
+    color: #f5f3ef;
     overflow: hidden;
 }
 
@@ -728,7 +821,7 @@ $projects = array(
 }
 
 .projects-primary-button:hover {
-    background: #fff;
+    background: var(--project-cream);
     color: #111;
     transform: translateY(-3px);
 }
@@ -880,7 +973,7 @@ $projects = array(
     align-items: center;
     gap: 13px;
     padding: 15px 20px;
-    background: #fff;
+    background: var(--project-cream);
     color: #111;
     box-shadow: 0 15px 35px rgba(0,0,0,.2);
 }
@@ -948,7 +1041,8 @@ $projects = array(
 
 .projects-intro {
     padding: 105px 0;
-    background: var(--project-cream);
+    background: var(--project-black);
+    color: #f5f3ef;
 }
 
 .projects-intro-grid {
@@ -960,6 +1054,7 @@ $projects = array(
 
 .projects-intro-heading h2 {
     margin: 20px 0 0;
+    color: #f5f3ef;
     font-size: clamp(36px, 5vw, 57px);
     line-height: 1.1;
     letter-spacing: -2.5px;
@@ -971,7 +1066,7 @@ $projects = array(
 }
 
 .projects-intro-content p {
-    color: #686868;
+    color: #b7b7b7;
     font-size: 14px;
     line-height: 2;
     margin: 0;
@@ -984,8 +1079,8 @@ $projects = array(
     gap: 12px;
     margin-top: 30px;
     padding-top: 18px;
-    border-top: 1px solid #ddd8d0;
-    color: #999;
+    border-top: 1px solid #383838;
+    color: #929292;
     font-size: 8px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -998,7 +1093,8 @@ $projects = array(
 
 .projects-gallery {
     padding: 105px 0;
-    background: #fff;
+    background: var(--project-black);
+    color: #f5f3ef;
 }
 
 .projects-section-heading {
@@ -1011,6 +1107,7 @@ $projects = array(
 
 .projects-section-heading h2 {
     margin: 17px 0 0;
+    color: #f5f3ef;
     font-size: clamp(39px, 5vw, 60px);
     line-height: 1.05;
     letter-spacing: -2.5px;
@@ -1021,10 +1118,15 @@ $projects = array(
     color: var(--project-orange);
 }
 
+.projects-section-heading .projects-label,
+.projects-intro .projects-label {
+    color: #ff8a3d;
+}
+
 .projects-section-heading > p {
     max-width: 330px;
     margin: 0 0 5px;
-    color: #777;
+    color: #b7b7b7;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -1037,12 +1139,12 @@ $projects = array(
     gap: 20px;
     padding: 20px 0;
     margin-bottom: 35px;
-    border-top: 1px solid #e9e6e1;
-    border-bottom: 1px solid #e9e6e1;
+    border-top: 1px solid #383838;
+    border-bottom: 1px solid #383838;
 }
 
 .projects-filter-label {
-    color: #999;
+    color: #a6a6a6;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 1.5px;
@@ -1061,7 +1163,7 @@ $projects = array(
     padding: 10px 13px;
     border: 1px solid transparent;
     background: transparent;
-    color: #777;
+    color: #b7b7b7;
     font-family: inherit;
     font-size: 10px;
     font-weight: 800;
@@ -1070,18 +1172,20 @@ $projects = array(
 }
 
 .project-filter span {
-    color: #aaa;
+    color: #888;
     font-size: 9px;
 }
 
 .project-filter:hover {
-    border-color: #ddd;
-    color: #111;
+    border-color: #555;
+    background: #1c1c1c;
+    color: #fff;
 }
 
 .project-filter.active {
-    background: #111;
-    color: #fff;
+    border-color: var(--project-orange);
+    background: var(--project-orange);
+    color: #111;
 }
 
 .project-filter.active span {
@@ -1097,15 +1201,15 @@ $projects = array(
 .project-card {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid #e9e6e1;
-    background: var(--project-cream);
+    border: 1px solid #383838;
+    background: #1a1a1a;
     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
 .project-card:hover {
     transform: translateY(-6px);
     border-color: rgba(249,115,22,.5);
-    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+    box-shadow: 0 20px 45px rgba(0,0,0,.35);
 }
 
 .project-card.hidden {
@@ -1205,7 +1309,7 @@ $projects = array(
 }
 
 .project-type-label {
-    color: var(--project-orange-dark);
+    color: #ff8a3d;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 1.4px;
@@ -1217,7 +1321,7 @@ $projects = array(
     justify-content: center;
     width: 32px;
     height: 32px;
-    border: 1px solid #ddd8d0;
+    border: 1px solid #454545;
     border-radius: 50%;
     color: var(--project-orange);
     font-size: 16px;
@@ -1233,7 +1337,7 @@ $projects = array(
 
 .project-content h3 {
     margin: 18px 0 12px;
-    color: #111;
+    color: #f5f3ef;
     font-size: 25px;
     font-weight: 900;
     letter-spacing: -.8px;
@@ -1242,15 +1346,15 @@ $projects = array(
 .project-description {
     min-height: 75px;
     margin: 0 0 23px;
-    color: #777;
+    color: #b7b7b7;
     font-size: 12px;
     line-height: 1.9;
 }
 
 .project-tech-heading {
     padding-bottom: 11px;
-    border-bottom: 1px solid #e4dfd7;
-    color: #999;
+    border-bottom: 1px solid #383838;
+    color: #a6a6a6;
     font-size: 8px;
     font-weight: 900;
     letter-spacing: 1.5px;
@@ -1265,11 +1369,92 @@ $projects = array(
 
 .project-technologies span {
     padding: 7px 10px;
-    border: 1px solid #e4dfd7;
-    background: #fff;
-    color: #555;
+    border: 1px solid #3c3c3c;
+    background: #252525;
+    color: #dedbd6;
     font-size: 9px;
     font-weight: 700;
+}
+
+.project-brief {
+    margin-top: 21px;
+    border-top: 1px solid #383838;
+}
+
+.project-brief summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 0;
+    color: #f5f3ef;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 800;
+    list-style: none;
+}
+
+.project-brief summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-brief summary span {
+    color: var(--project-orange-dark);
+    font-size: 18px;
+    font-weight: 400;
+    transition: transform .2s ease;
+}
+
+.project-brief[open] summary span {
+    transform: rotate(45deg);
+}
+
+.project-brief summary:focus-visible {
+    outline: 2px solid var(--project-orange-dark);
+    outline-offset: 3px;
+}
+
+.project-brief-content {
+    display: grid;
+    gap: 14px;
+    padding: 0 0 17px;
+}
+
+.project-brief-content h4 {
+    margin: 0 0 5px;
+    color: #ff8a3d;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-brief-content p {
+    margin: 0;
+    color: #b7b7b7;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.project-contributions {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-contributions li {
+    display: grid;
+    gap: 3px;
+    color: #b7b7b7;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.project-contributions strong {
+    color: #f5f3ef;
+    font-size: 10px;
 }
 
 .project-card-footer {
@@ -1277,7 +1462,7 @@ $projects = array(
     align-items: center;
     gap: 13px;
     margin-top: 25px;
-    color: #aaa;
+    color: #929292;
     font-size: 8px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -1286,13 +1471,13 @@ $projects = array(
 .project-footer-line {
     flex: 1;
     height: 1px;
-    background: #ded9d1;
+    background: #383838;
 }
 
 .projects-empty {
     padding: 35px;
     text-align: center;
-    color: #777;
+    color: #b7b7b7;
     font-size: 13px;
 }
 
@@ -1307,8 +1492,8 @@ $projects = array(
     gap: 12px;
     padding-top: 22px;
     margin-top: 40px;
-    border-top: 1px solid #e9e6e1;
-    color: #aaa;
+    border-top: 1px solid #383838;
+    color: #929292;
     font-size: 8px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -1476,7 +1661,7 @@ $projects = array(
 }
 
 .projects-closing-button:hover {
-    background: #fff;
+    background: var(--project-cream);
     color: #111;
     transform: translateY(-3px);
 }
@@ -1711,6 +1896,150 @@ $projects = array(
         animation-duration: .01ms !important;
     }
 
+}
+
+/* Refined surfaces and accent-color interactions */
+.our-projects-page {
+    background:
+        radial-gradient(ellipse at 12% 24%, rgba(249, 115, 22, .055), transparent 34%),
+        #101010;
+}
+
+.our-projects-page .projects-hero {
+    background:
+        radial-gradient(ellipse at 78% 12%, rgba(249, 115, 22, .1), transparent 33%),
+        linear-gradient(145deg, #101010 0%, #151515 55%, #101010 100%);
+}
+
+.our-projects-page .projects-intro,
+.our-projects-page .projects-process {
+    background:
+        radial-gradient(ellipse at 88% 50%, rgba(249, 115, 22, .045), transparent 38%),
+        #121212;
+}
+
+.our-projects-page .projects-gallery {
+    background:
+        radial-gradient(ellipse at 5% 18%, rgba(249, 115, 22, .035), transparent 30%),
+        #101010;
+}
+
+.our-projects-page .hero-floating-card {
+    border: 1px solid #383838;
+    background: linear-gradient(145deg, #222, #181818);
+    color: #f5f3ef;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .35);
+}
+
+.our-projects-page .hero-floating-card div span {
+    color: #aaa;
+}
+
+.our-projects-page .project-card,
+.our-projects-page .process-item {
+    border-color: #363636;
+    background: linear-gradient(145deg, #1d1d1d, #151515);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
+}
+
+.our-projects-page .project-card {
+    position: relative;
+}
+
+.our-projects-page .project-card::before,
+.our-projects-page .process-item::before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--project-orange), transparent);
+    content: "";
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.our-projects-page .project-card:hover,
+.our-projects-page .process-item:hover {
+    transform: translateY(-7px);
+    border-color: rgba(249, 115, 22, .75);
+    background: linear-gradient(145deg, #24201d, #171717 72%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .4), 0 0 28px rgba(249, 115, 22, .1);
+}
+
+.our-projects-page .project-card:hover::before,
+.our-projects-page .process-item:hover::before {
+    opacity: 1;
+}
+
+.our-projects-page .project-card:hover .project-content h3,
+.our-projects-page .process-item:hover h3 {
+    color: #ffb17f;
+}
+
+.our-projects-page .project-filter:hover {
+    border-color: rgba(249, 115, 22, .65);
+    background: rgba(249, 115, 22, .1);
+    color: #ffb17f;
+}
+
+.our-projects-page .project-filter.active span {
+    color: #111;
+}
+
+.our-projects-page .project-technologies span {
+    transition: border-color .25s ease, background .25s ease, color .25s ease;
+}
+
+.our-projects-page .project-technologies span:hover {
+    border-color: rgba(249, 115, 22, .65);
+    background: rgba(249, 115, 22, .12);
+    color: #ffb17f;
+}
+
+.our-projects-page .project-brief summary:hover {
+    color: #ffb17f;
+}
+
+.our-projects-page .project-brief summary:hover span {
+    color: #ffb17f;
+}
+
+.our-projects-page .projects-primary-button:hover {
+    background: #ff9a52;
+    color: #111;
+    box-shadow: 0 10px 28px rgba(249, 115, 22, .24);
+}
+
+.our-projects-page .projects-text-link:hover,
+.our-projects-page .projects-hero-bottom a:hover,
+.our-projects-page .projects-closing-footer a:hover {
+    color: #ffd2ad;
+}
+
+.our-projects-page .hero-code-window:hover {
+    border-color: rgba(249, 115, 22, .6);
+    box-shadow: 0 32px 85px rgba(0, 0, 0, .42), 0 0 30px rgba(249, 115, 22, .1);
+}
+
+.our-projects-page .projects-closing {
+    background:
+        radial-gradient(ellipse at 85% 20%, rgba(255, 255, 255, .16), transparent 34%),
+        linear-gradient(120deg, #f97316, #e8660e);
+}
+
+.our-projects-page .projects-closing-button:hover {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 12px 30px rgba(17, 17, 17, .2);
+}
+
+.our-projects-page a:focus-visible,
+.our-projects-page button:focus-visible,
+.our-projects-page summary:focus-visible {
+    outline: 2px solid #ffad79;
+    outline-offset: 4px;
 }
 
 </style>

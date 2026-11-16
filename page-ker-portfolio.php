@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/';
-$kp_email  = 'occ.talara.kerby@gmail.com';
 ?>
 
 <style>
@@ -295,6 +294,7 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
         <div class="kp-container">
             <div class="kp-hero-top">
                 <span class="kp-label">PERSONAL PORTFOLIO / 2026</span>
+                <a class="kp-back-members" href="<?php echo esc_url(home_url('/our-members/')); ?>">Back to Our Members</a>
                 <span class="kp-hero-index">DEVELOPER_PROFILE_001</span>
             </div>
 
@@ -304,10 +304,10 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
                     <h1 id="kp-hero-title">Hello, I'm <span>Kerby Talara.</span></h1>
                     <div class="kp-role"><span aria-hidden="true"></span> PROGRAMMER &amp; ASPIRING WEB DEVELOPER</div>
                     <p>
-                        I'm Kerby Talara, a student and aspiring programmer interested in
-                        web development, programming, and Internet of Things projects.
-                        I enjoy learning how technology works, turning ideas into practical
-                        projects, and improving my skills through hands-on experience.
+                        I'm Kerby Talara, an IT student focused on web development and programming.
+                        I build WordPress pages with PHP, HTML, and CSS, and enjoy testing ideas
+                        through practical projects. I am also exploring IoT and embedded systems
+                        as another way to apply programming to real-world tasks.
                     </p>
                     <div class="kp-hero-actions">
                         <a href="#kp-projects" class="kp-button">EXPLORE MY WORK <span class="kp-button-arrow" aria-hidden="true">↗</span></a>
@@ -376,26 +376,26 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
             </div>
             <div class="kp-about-content">
                 <p>
-                    I'm <strong>Kerby Talara</strong>, a student with a strong interest in
-                    programming, technology, and digital development. I enjoy exploring
-                    how websites and applications work and discovering ways to create
-                    useful digital experiences.
+                    I'm <strong>Kerby Talara</strong>, an IT student whose main interest is
+                    building websites and understanding how software works. I enjoy taking
+                    a page or feature from an initial idea through implementation and review.
                 </p>
                 <p>
-                    Through my learning experiences, I continue to develop my technical
-                    abilities, creativity, and problem-solving skills. I believe that
-                    every project is an opportunity to apply what I have learned and
-                    discover something new.
+                    Classwork and project practice help me strengthen my programming,
+                    problem-solving, and debugging skills. When something does not work
+                    as expected, I break the task into smaller parts, test changes, and
+                    learn from the result.
                 </p>
                 <p>
-                    I have explored web development and Internet of Things projects,
-                    including work with WordPress, PHP, ESP32 boards, and sensors.
-                    These experiences have helped me understand different parts of
-                    software and hardware development.
+                    I have worked with WordPress and PHP for website development and
+                    explored ESP32 boards and sensors in IoT experiments. These are
+                    learning experiences, and I continue to build my understanding
+                    through hands-on practice.
                 </p>
                 <p>
-                    My goal is to keep improving, gain more practical experience, and
-                    build reliable digital solutions that address real needs.
+                    I aim to deepen my skills in WordPress and PHP, improve how I test
+                    and maintain websites, and continue learning about embedded and
+                    IoT projects.
                 </p>
                 <div class="kp-about-facts">
                     <div class="kp-fact"><span>FULL NAME</span><strong>Kerby Talara</strong></div>
@@ -462,13 +462,13 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
             <div class="kp-education-intro">
                 <span class="kp-label">03 / EDUCATION</span>
                 <h2 class="kp-heading" id="kp-education-title">My academic <span>journey.</span></h2>
-                <p class="kp-description">The schools and learning experiences that have contributed to my educational and personal development.</p>
+                <p class="kp-description">My education provides the foundation for my continued learning in programming and web development.</p>
             </div>
             <div class="kp-timeline">
                 <article class="kp-education-item"><span class="kp-education-year">2015 – 2016</span><h3>Elementary Education</h3><p>Luyongbonbon Elementary School</p></article>
                 <article class="kp-education-item"><span class="kp-education-year">2018 – 2019</span><h3>Junior High School</h3><p>Opol National Secondary Technical School</p></article>
                 <article class="kp-education-item"><span class="kp-education-year">2021 – 2022</span><h3>Senior High School</h3><p>Opol National Secondary Technical School</p></article>
-                <article class="kp-education-item"><span class="kp-education-year">2026 – 2027 Present</span><h3>Tertiary Education</h3><p>Opol Community College</p></article>
+                <article class="kp-education-item"><span class="kp-education-year">2026 – 2027 (Present; confirm date range)</span><h3>Tertiary Education</h3><p>Opol Community College</p></article>
             </div>
         </div>
     </section>
@@ -484,43 +484,43 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
             <div class="kp-project-grid">
                 <article class="kp-project-card">
                     <div class="kp-project-image">
-                        <img src="<?php echo esc_url( $kp_images . 'Our.png' ); ?>" alt="OurSpace group portfolio website" loading="lazy" decoding="async">
+                        <img src="<?php echo esc_url( $kp_images . 'our.png' ); ?>" alt="DEVHUB GROUP PORTFOLIO website preview" loading="lazy" decoding="async">
                         <div class="kp-project-overlay"><span class="kp-project-category">WEB DEVELOPMENT</span><span class="kp-project-index">PROJECT_01</span></div>
                     </div>
                     <div class="kp-project-info">
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
-                        <h3>OurSpace Portfolio</h3>
-                        <p>A group portfolio website that brings member profiles, individual skills, projects, and experiences together in one organized digital platform.</p>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN DEVELOPMENT</span></div>
+                        <h3>DEVHUB GROUP PORTFOLIO</h3>
+                        <p>A shared website for exploring the team, each member’s portfolio, skills, educational background, and selected projects.</p>
                         <div class="kp-project-role"><strong>My role:</strong> WordPress theme development. I worked on the website structure, PHP page templates, styling, and the presentation of portfolio content.</div>
                         <div class="kp-project-stack"><span>HTML</span><span>CSS</span><span>PHP</span><span>WordPress</span></div>
                     </div>
                 </article>
 
                 <article class="kp-project-card">
-                    <div class="kp-project-image">
-                        <img src="<?php echo esc_url( $kp_images . 'smartcap.jpg' ); ?>" alt="SmartCap Alert medicine container prototype" loading="lazy" decoding="async">
-                        <div class="kp-project-overlay"><span class="kp-project-category">INTERNET OF THINGS</span><span class="kp-project-index">PROJECT_02</span></div>
+                    <div class="kp-project-image project-image-showcase">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'alub.png' ); ?>" alt="PTA Accounting and Membership System for Alubijid National Comprehensive High School" loading="lazy" decoding="async">
+                        <div class="kp-project-overlay"><span class="kp-project-category">WEB APPLICATION</span><span class="kp-project-index">PROJECT_02</span></div>
                     </div>
                     <div class="kp-project-info">
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
-                        <h3>SmartCap Alert</h3>
-                        <p>An IoT-based medicine container prototype designed to monitor container activity using a magnetic reed switch sensor and connected technology.</p>
-                        <div class="kp-project-role"><strong>Project focus:</strong> Exploring sensor-based container activity monitoring with an ESP32 and connected IoT components.</div>
-                        <div class="kp-project-stack"><span>ESP32</span><span>Arduino IDE</span><span>Blynk</span><span>IoT</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN PROGRESS</span></div>
+                        <h3>PTA Accounting and Membership System</h3>
+                        <p>A responsive system for managing PTA membership, student and guardian information, contributions, finances, announcements, and reports at Alubijid National Comprehensive High School.</p>
+                        <div class="kp-project-role"><strong>Project focus:</strong> Supporting accurate records and transparent monitoring of PTA funds through an organized, role-based interface.</div>
+                        <div class="kp-project-stack"><span>Membership</span><span>Contributions</span><span>Financial Records</span><span>Reports</span></div>
                     </div>
                 </article>
 
                 <article class="kp-project-card">
-                    <div class="kp-project-image">
-                        <img src="<?php echo esc_url( $kp_images . 'agrisense.jpg' ); ?>" alt="AgriSense automatic irrigation project concept" loading="lazy" decoding="async">
-                        <div class="kp-project-overlay"><span class="kp-project-category">SMART AGRICULTURE</span><span class="kp-project-index">PROJECT_03</span></div>
+                    <div class="kp-project-image project-image-showcase project-image-app">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'app.jpeg' ); ?>" alt="Pet Adoption Application" loading="lazy" decoding="async">
+                        <div class="kp-project-overlay"><span class="kp-project-category">PET ADOPTION</span><span class="kp-project-index">PROJECT_03</span></div>
                     </div>
                     <div class="kp-project-info">
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
-                        <h3>AgriSense</h3>
-                        <p>An ESP32-based irrigation project concept designed to support watering decisions through sensor monitoring and automated controls.</p>
-                        <div class="kp-project-role"><strong>Project focus:</strong> Exploring how sensors and automated control can support more informed and efficient plant watering.</div>
-                        <div class="kp-project-stack"><span>ESP32</span><span>Sensors</span><span>Arduino IDE</span><span>IoT</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>MOBILE APPLICATION</span></div>
+                        <h3>Pet Adoption Application</h3>
+                        <p>A mobile application that helps prospective adopters discover pets and begin the adoption process.</p>
+                        <div class="kp-project-role"><strong>Project focus:</strong> Building a mobile experience for browsing pet profiles and submitting adoption applications.</div>
+                        <div class="kp-project-stack"><span>Laravel</span><span>React Native</span></div>
                     </div>
                 </article>
 
@@ -546,29 +546,58 @@ $kp_email  = 'occ.talara.kerby@gmail.com';
         <div class="kp-container">
             <span class="kp-label">05 / RECOGNITION</span>
             <h2 class="kp-heading" id="kp-certificates-title">Learning beyond <span>the classroom.</span></h2>
-            <p class="kp-description">A space for certificates, seminars, workshops, recognitions, and other accomplishments throughout my academic and technical journey.</p>
+            <p class="kp-description">This section is reserved for verified certificates or learning milestones when there are items to share.</p>
             <div class="kp-certificate-box">
                 <div class="kp-certificate-icon" aria-hidden="true">05</div>
                 <div class="kp-certificate-content">
                     <span>CONTINUOUS DEVELOPMENT</span>
                     <h3>My Learning Journey</h3>
-                    <p>I continue to develop my knowledge through academic activities, hands-on projects, experimentation, and independent learning.</p>
-                    <p>As I receive official certificates, attend seminars or workshops, or earn recognitions, I can add the actual details and certificate images here.</p>
+                    <p>I am developing my skills through website work, programming practice, and experiments with ESP32 boards and sensors.</p>
+                    <p>No certificates or awards are listed here at this time. Verified details can be added when available.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- MY APPROACH -->
+    <section class="kp-section kp-skills" id="kp-approach" aria-labelledby="kp-approach-title">
+        <div class="kp-container">
+            <div class="kp-section-header">
+                <span class="kp-label">06 / MY APPROACH</span>
+                <h2 class="kp-heading" id="kp-approach-title">How I build <span>for people.</span></h2>
+                <p class="kp-description">A practical process that helps me turn an idea into a useful, working digital experience.</p>
+            </div>
+            <div class="kp-skills-grid">
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">01 / PLAN</span><span class="kp-skill-symbol">01</span></div>
+                    <h3>Understand the goal</h3>
+                    <p>I clarify what the project should do and organize the page structure before developing it.</p>
+                    <div class="kp-skill-tags"><span>Requirements</span><span>Structure</span><span>Planning</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">02 / BUILD</span><span class="kp-skill-symbol">02</span></div>
+                    <h3>Develop and iterate</h3>
+                    <p>I use web technologies to build the interface and refine it as the project takes shape.</p>
+                    <div class="kp-skill-tags"><span>HTML / CSS</span><span>PHP</span><span>WordPress</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">03 / REVIEW</span><span class="kp-skill-symbol">03</span></div>
+                    <h3>Test and improve</h3>
+                    <p>I check the result, fix issues, and make improvements so the pages work across screen sizes.</p>
+                    <div class="kp-skill-tags"><span>Testing</span><span>Responsive design</span><span>Iteration</span></div>
+                </article>
+            </div>
+            <p class="kp-description">My goal: turn ideas into reliable, responsive digital experiences.</p>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section class="kp-contact" id="kp-contact" aria-labelledby="kp-contact-title">
         <div class="kp-container kp-contact-content">
-            <span class="kp-label">06 / LET'S CONNECT</span>
+            <span class="kp-label">07 / LET'S CONNECT</span>
             <h2 id="kp-contact-title">Ideas become reality<br>through <span>development.</span></h2>
             <p>Thank you for taking the time to explore my portfolio. Every project is another opportunity to learn, improve, and create something meaningful.</p>
-            <a href="<?php echo esc_url( 'mailto:' . sanitize_email( $kp_email ) ); ?>" class="kp-button">GET IN TOUCH <span class="kp-button-arrow" aria-hidden="true">↗</span></a>
-            <br>
-            <a href="<?php echo esc_url( 'mailto:' . sanitize_email( $kp_email ) ); ?>" class="kp-contact-email"><?php echo esc_html( antispambot( $kp_email ) ); ?></a>
-            <br>
+            <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="kp-button">CONTACT THROUGH DEVHUB <span class="kp-button-arrow" aria-hidden="true">↗</span></a>
           
         </div>
     </section>

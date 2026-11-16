@@ -399,6 +399,22 @@ get_header();
     background: #d9e7ff;
 }
 
+.project-cover.pet-adoption-cover {
+    height: 480px;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.project-cover.pet-adoption-cover img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .project-cover.purple {
     background: #e7dcff;
 }
@@ -1011,31 +1027,31 @@ get_header();
 
                         <div class="project-cover green">
 
-                            <small>01 / IOT PROTOTYPE</small>
+                            <small>01 / PTA SYSTEM</small>
 
                             <strong>
-                                SMARTCAP<br>
-                                ALERT
+                                PTA ACCOUNTING<br>
+                                &amp; MEMBERSHIP
                             </strong>
 
                         </div>
 
                         <div class="project-details">
 
-                            <h3>SmartCap Alert</h3>
+                            <h3>PTA Accounting and Membership System</h3>
 
                             <p>
-                                An IoT-based medicine container
-                                prototype designed to monitor
-                                container opening activity and
-                                provide medication reminders
-                                through connected technology.
+                                A responsive system for managing
+                                PTA membership, student and guardian
+                                information, contributions, finances,
+                                announcements, and reports at Alubijid
+                                National Comprehensive High School.
                             </p>
 
-                            <span class="project-tag">ESP32</span>
-                            <span class="project-tag">Magnetic Reed Switch</span>
-                            <span class="project-tag">IoT</span>
-                            <span class="project-tag">Blynk</span>
+                            <span class="project-tag">Membership</span>
+                            <span class="project-tag">Contributions</span>
+                            <span class="project-tag">Financial Records</span>
+                            <span class="project-tag">Role-Based Access</span>
 
                         </div>
 
@@ -1091,33 +1107,23 @@ get_header();
 
                     <article class="portfolio-project-card">
 
-                        <div class="project-cover blue">
-
-                            <small>03 / AUTOMATION PROJECT</small>
-
-                            <strong>
-                                AGRISENSE<br>
-                                IRRIGATION
-                            </strong>
+                        <div class="project-cover blue pet-adoption-cover">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/app.jpeg'); ?>" alt="Pet Adoption Application preview" loading="lazy" decoding="async">
 
                         </div>
 
                         <div class="project-details">
 
-                            <h3>AgriSense Automatic Irrigation</h3>
+                            <h3>Pet Adoption Application</h3>
 
                             <p>
-                                An automated irrigation project
-                                concept that uses sensors and
-                                an ESP32 to monitor environmental
-                                conditions and support efficient
-                                plant watering.
+                                A mobile application that helps
+                                prospective adopters discover pets
+                                and begin the adoption process.
                             </p>
 
-                            <span class="project-tag">ESP32</span>
-                            <span class="project-tag">Arduino IDE</span>
-                            <span class="project-tag">Sensors</span>
-                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">React Native</span>
 
                         </div>
 

@@ -50,70 +50,70 @@ $team_roles = array(
         'icon'  => 'code',
         'role'  => 'Programmer / Web Developer',
         'name'  => 'Kerby Talara',
-        'text'  => 'Turns our plans and designs into a working, responsive website.',
+        'text'  => 'Builds the website by translating the team’s requirements and approved layouts into functional, responsive pages.',
         'tasks' => array(
-            'Builds pages, features, and interactions',
-            'Keeps the site responsive and functional',
-            'Tests, debugs, and fixes technical issues',
+            'Develops and maintains the site’s pages and features',
+            'Checks responsive behavior and working navigation',
+            'Tests the implementation and addresses technical issues',
         ),
     ),
     array(
         'icon'  => 'document',
         'role'  => 'Technical Writer',
         'name'  => 'Claire Cabilao',
-        'text'  => 'Makes our work clear, organized, and easy for anyone to understand.',
+        'text'  => 'Communicates project information clearly and keeps written content organized and consistent.',
         'tasks' => array(
-            'Writes and organizes project documentation',
-            'Prepares guides, reports, and page content',
-            'Reviews text for clarity and consistency',
+            'Prepares and organizes project documentation',
+            'Writes clear reports, guides, and website content',
+            'Reviews written material for accuracy and consistency',
         ),
     ),
     array(
         'icon'  => 'diagram',
         'role'  => 'System Analyst',
         'name'  => 'Ann Jelie Dalde',
-        'text'  => 'Studies what the system needs and shapes how it should work.',
+        'text'  => 'Analyzes the project’s requirements and helps define how the website should organize and present information.',
         'tasks' => array(
-            'Gathers and analyzes project requirements',
-            'Plans the structure, flow, and features',
-            'Checks that the solution meets its goals',
+            'Identifies user needs and clarifies requirements',
+            'Maps the site’s information structure and page flow',
+            'Reviews whether planned features address the project goals',
         ),
     ),
     array(
         'icon'  => 'flag',
         'role'  => 'Project Manager',
         'name'  => 'Dhelay Mae Laid',
-        'text'  => 'Keeps the team aligned, organized, and moving toward deadlines.',
+        'text'  => 'Coordinates the team’s tasks, schedule, and communication throughout the project.',
         'tasks' => array(
-            'Plans schedules and assigns tasks',
-            'Tracks progress and coordinates the team',
-            'Keeps communication open and clear',
+            'Organizes the work plan, schedule, and task assignments',
+            'Monitors progress and follows up on agreed responsibilities',
+            'Facilitates communication and team coordination',
         ),
     ),
 );
 
 $core_values = array(
-    array('icon' => 'users',  'title' => 'Collaboration',       'text' => 'We listen, share ideas, and reach better results by working as one team.'),
-    array('icon' => 'bulb',   'title' => 'Innovation',          'text' => 'We look for fresh, practical ways to solve problems and improve our work.'),
-    array('icon' => 'shield', 'title' => 'Responsibility',      'text' => 'We own our tasks, respect deadlines, and stand behind what we produce.'),
-    array('icon' => 'book',   'title' => 'Continuous Learning', 'text' => 'We treat every challenge as a chance to grow our skills and knowledge.'),
-    array('icon' => 'target', 'title' => 'Commitment',          'text' => 'We stay focused and give our best effort from the first plan to the final output.'),
+    array('icon' => 'star',   'title' => 'Creativity',           'text' => 'We explore thoughtful ways to organize information, present our work, and address project challenges.'),
+    array('icon' => 'users',  'title' => 'Collaboration',        'text' => 'We share ideas, listen to different perspectives, and coordinate our efforts toward a common goal.'),
+    array('icon' => 'shield', 'title' => 'Responsibility',       'text' => 'We take ownership of our assigned work, communicate progress, and consider the quality of the whole project.'),
+    array('icon' => 'book',   'title' => 'Continuous Learning',  'text' => 'We use feedback and practical challenges to strengthen our skills and understanding.'),
+    array('icon' => 'bulb',   'title' => 'Innovation',           'text' => 'We stay open to useful ideas and approaches that can make our work clearer and more effective.'),
 );
 
 $process_steps = array(
-    array('title' => 'Planning and Research',          'text' => 'Define goals, gather information, and decide what the project needs.'),
-    array('title' => 'System Analysis and Design',     'text' => 'Study requirements, then outline the structure, layout, and flow.'),
-    array('title' => 'Development and Implementation', 'text' => 'Build the features and pages according to the approved design.'),
-    array('title' => 'Documentation and Testing',      'text' => 'Record how everything works and check that it performs correctly.'),
-    array('title' => 'Evaluation and Improvement',     'text' => 'Review the results, gather feedback, and refine the final product.'),
+    array('title' => 'Planning and Research',          'text' => 'Agree on the website’s purpose and audience, gather the information to present, and define the project requirements.'),
+    array('title' => 'System Analysis and Design',     'text' => 'Organize the content and map the page structure, navigation, and intended visitor experience.'),
+    array('title' => 'Development and Implementation', 'text' => 'Build the WordPress pages and integrate the prepared content according to the project plan.'),
+    array('title' => 'Documentation and Testing',      'text' => 'Document relevant project details and review page content, navigation, and functionality.'),
+    array('title' => 'Evaluation and Improvement',     'text' => 'Use team review and feedback to identify updates and refine the website over time.'),
 );
 
 $shared_strengths = array(
-    array('icon' => 'message', 'title' => 'Communication',        'text' => 'Regular updates keep the analyst, developer, writer, and manager working from the same understanding.'),
-    array('icon' => 'users',   'title' => 'Teamwork',             'text' => 'Each role depends on the others, so progress is made together instead of in isolation.'),
-    array('icon' => 'code',    'title' => 'Technical Knowledge',  'text' => 'Analysis and development skills turn requirements into a website that works as planned.'),
-    array('icon' => 'star',    'title' => 'Creativity',           'text' => 'Different viewpoints lead to better layouts, clearer content, and more original ideas.'),
-    array('icon' => 'shield',  'title' => 'Shared Responsibility','text' => 'Everyone is accountable for the quality of the final result, not only for their own part.'),
+    array('icon' => 'message', 'title' => 'Communication', 'text' => 'Clear updates help the analyst, developer, writer, and project manager stay informed and coordinate decisions.'),
+    array('icon' => 'users',   'title' => 'Teamwork', 'text' => 'Members contribute their expertise while reviewing and supporting work across the project.'),
+    array('icon' => 'code',    'title' => 'Technical Problem-Solving', 'text' => 'We apply analysis and development knowledge to address requirements and resolve implementation issues.'),
+    array('icon' => 'star',    'title' => 'Adaptability', 'text' => 'We consider feedback and adjust plans or content when review reveals a clearer approach.'),
+    array('icon' => 'shield',  'title' => 'Shared Responsibility', 'text' => 'Each person owns their assignments and contributes to the quality and consistency of the group portfolio.'),
 );
 
 $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
@@ -128,20 +128,37 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
     <section class="about-hero">
         <div class="container">
 
-            <span class="about-eyebrow" data-reveal="up">
-                Get to Know Our Group
-            </span>
+            <div class="about-hero-grid">
+                <div class="about-hero-copy">
+                    <span class="about-eyebrow" data-reveal="up">
+                        DEVHUB GROUP PORTFOLIO
+                    </span>
 
-            <h1 data-reveal="up">
-                About <span>Our Group.</span>
-            </h1>
+                    <h1 data-reveal="up">
+                        About <span>DEVHUB.</span>
+                    </h1>
 
-            <p data-reveal="up">
-                Different talents, individual strengths, and shared ideas
-                come together in one digital portfolio. Discover our story,
-                our purpose, and what inspires us to create, learn, and grow
-                together.
-            </p>
+                    <p data-reveal="up">
+                        DEVHUB GROUP PORTFOLIO brings together four IT students to present
+                        our individual portfolios and shared project work. Learn about our
+                        roles, the purpose behind the website, and how we apply our skills
+                        through planning, development, documentation, and teamwork.
+                    </p>
+                </div>
+
+                <figure class="about-team-photo" data-reveal="right">
+                    <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/group.jpg'); ?>"
+                        alt="The DEVHUB team together"
+                        fetchpriority="high"
+                        decoding="async"
+                    >
+                    <figcaption>
+                        <span>DEVHUB</span>
+                        <strong><?php echo esc_html(sprintf('%02d', count($team_roles))); ?> MEMBERS · ONE TEAM</strong>
+                    </figcaption>
+                </figure>
+            </div>
 
         </div>
     </section>
@@ -161,7 +178,7 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    A digital space that represents who we are.
+                    One place to explore our team and work.
                 </h2>
 
             </div>
@@ -169,26 +186,24 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
             <div class="about-content" data-reveal="right">
 
                 <p>
-                    Our Group Portfolio is a website developed to showcase
-                    the different skills, talents, experiences, and
-                    accomplishments of our group members. It brings
-                    individual portfolios together in one organized
-                    and accessible digital platform.
+                    DEVHUB GROUP PORTFOLIO is a student-developed website that introduces our team
+                    and brings our individual portfolios together in one place. DEV refers to
+                    development and developers; HUB represents a central place where people can
+                    connect, collaborate, and share ideas.
                 </p>
 
                 <p>
-                    The website allows visitors to explore our members'
-                    backgrounds, discover their abilities, and view the
-                    projects and activities they have completed. Each
-                    member has unique strengths, interests, and experiences
-                    that contribute to the identity of our group.
+                    Visitors can learn about each member, explore individual portfolio pages,
+                    and review information about skills, educational backgrounds, projects, and
+                    certificates. These sections make it easier to understand each member’s
+                    interests, learning, and contributions.
                 </p>
 
                 <p>
-                    Through this platform, we aim to present our work
-                    professionally while making it easier for visitors
-                    to understand who we are, what we do, and what we
-                    can accomplish through collaboration.
+                    The site’s scope is to organize and present this team and portfolio
+                    information, along with selected group projects. It gives visitors a
+                    clear path to discover our work while helping us practice how information
+                    and project outcomes are presented online.
                 </p>
 
             </div>
@@ -211,14 +226,13 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    What we want to achieve.
+                    The goals of our project.
                 </h2>
 
                 <p>
-                    This project is designed to bring our individual
-                    abilities together while creating opportunities
-                    to present our work, develop our skills, and
-                    connect with others.
+                    Our objectives focus on presenting our current work clearly, applying
+                    our IT knowledge in a practical website, and giving visitors an
+                    organized way to learn about the team.
                 </p>
 
             </div>
@@ -244,11 +258,9 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                         <h3>Showcase Our Skills</h3>
 
                         <p>
-                            Highlight the individual talents, technical
-                            abilities, creativity, and knowledge of every
-                            group member. We want to demonstrate what each
-                            person can contribute through their unique
-                            skills and experiences.
+                            Present each member’s skills, educational background,
+                            interests, and role so visitors can understand the
+                            different contributions within our team.
                         </p>
 
                     </div>
@@ -274,11 +286,9 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                         <h3>Present Our Projects</h3>
 
                         <p>
-                            Showcase our completed works, creative outputs,
-                            academic activities, and development projects.
-                            This section allows visitors to explore our
-                            progress and see how we apply our knowledge
-                            in actual work.
+                            Organize selected group and individual projects
+                            with clear descriptions, helping visitors see how
+                            we apply course knowledge and develop our ideas.
                         </p>
 
                     </div>
@@ -304,10 +314,9 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                         <h3>Build Collaboration</h3>
 
                         <p>
-                            Encourage teamwork, communication, and the
-                            sharing of ideas. We aim to demonstrate how
-                            different perspectives and individual strengths
-                            can work together to achieve a common goal.
+                            Coordinate analysis, development, writing, and
+                            project management so different responsibilities
+                            contribute to one shared website.
                         </p>
 
                     </div>
@@ -333,10 +342,9 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                         <h3>Connect With Others</h3>
 
                         <p>
-                            Provide visitors with an opportunity to discover
-                            our members, understand our interests, explore
-                            our accomplishments, and connect with us through
-                            our shared digital portfolio.
+                            Make it straightforward for classmates, instructors,
+                            and other visitors to navigate our profiles and
+                            learn about our work through a single website.
                         </p>
 
                     </div>
@@ -363,7 +371,7 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    The story behind our project.
+                    Why we needed a shared portfolio.
                 </h2>
 
             </div>
@@ -371,36 +379,30 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
             <div class="about-content" data-reveal="right">
 
                 <p>
-                    In today's digital world, websites play an important
-                    role in sharing information, presenting achievements,
-                    and showcasing personal and professional work.
-                    Having an online presence provides individuals and
-                    groups with an opportunity to reach a wider audience
-                    and communicate their ideas effectively.
+                    As IT students, we develop skills and complete work across
+                    different areas. When that information is presented in
+                    separate places, it can be difficult for others to see
+                    how individual contributions fit together.
                 </p>
 
                 <p>
-                    We developed this group portfolio as a way to bring
-                    our individual works and personal portfolios together
-                    in one website. Instead of presenting our information
-                    separately, we wanted to create a shared platform
-                    that represents our identity, creativity, and
-                    cooperation as a group.
+                    We created DEVHUB GROUP PORTFOLIO to provide a shared context
+                    for our individual portfolios and group projects. The website
+                    reflects our work as a student team while allowing each member
+                    to present their own background and areas of interest.
                 </p>
 
                 <p>
-                    This project also serves as an opportunity to apply
-                    the knowledge and technical skills we have gained
-                    in website development. From planning the layout
-                    to organizing the content and designing the pages,
-                    we aim to create a functional, accessible, and
-                    visually organized website.
+                    The project gives us a practical setting to apply what we
+                    have learned about requirements, content organization,
+                    WordPress, and website development. Each team role contributes
+                    to planning, building, documenting, and coordinating the site.
                 </p>
 
                 <p>
-                    Throughout the development process, we continue
-                    to learn, solve problems, exchange ideas, and
-                    improve our abilities as individuals and as a team.
+                    Developing the site also gives us experience working through
+                    decisions and revisions together. We use review and feedback
+                    to improve the content and functionality as the project grows.
                 </p>
 
             </div>
@@ -423,13 +425,13 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    Four roles. One complete team.
+                    Clear responsibilities. Shared results.
                 </h2>
 
                 <p>
-                    Every project needs more than code. Each member
-                    takes a specialized role that covers a different
-                    part of planning, building, and presenting our work.
+                    Our four roles support different parts of the project, from
+                    analyzing requirements and developing pages to preparing
+                    documentation and coordinating tasks.
                 </p>
 
             </div>
@@ -501,17 +503,15 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                     </span>
 
                     <h3>
-                        To share, inspire, and grow together.
+                        To learn and build together.
                     </h3>
 
                     <p>
-                        Our mission is to develop an organized and
-                        accessible online platform where every group
-                        member can showcase their skills, share their
-                        accomplishments, and express their creativity.
-                        We aim to promote teamwork, encourage the
-                        exchange of ideas, and create opportunities
-                        for continuous learning and improvement.
+                        Our mission is to maintain a clear, accessible group portfolio
+                        where members can present their backgrounds, skills, education,
+                        and project work. Through developing and improving the site,
+                        we aim to apply our IT knowledge, communicate effectively, and
+                        learn from one another as a student team.
                     </p>
 
                 </article>
@@ -525,17 +525,15 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                     </span>
 
                     <h3>
-                        A space where every talent has a place.
+                        Grow as thoughtful IT professionals.
                     </h3>
 
                     <p>
-                        Our vision is to establish a meaningful and
-                        creative digital portfolio that represents
-                        our group's abilities, achievements, and
-                        potential. We aspire to create a platform
-                        that inspires others through our shared
-                        experiences, individual talents, and
-                        collaborative projects.
+                        Our vision is to grow as adaptable IT learners who can work
+                        across different roles, present our work responsibly, and
+                        develop thoughtful digital solutions. We hope DEVHUB will
+                        continue to reflect our progress and provide a useful way
+                        for others to explore our work.
                     </p>
 
                 </article>
@@ -564,8 +562,8 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </h2>
 
                 <p>
-                    These values guide how we make decisions, support
-                    one another, and take pride in what we deliver.
+                    Creativity, collaboration, responsibility, learning, and
+                    innovation guide how we approach tasks and support one another.
                 </p>
 
             </div>
@@ -608,12 +606,12 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    How an idea becomes a finished project.
+                    How we develop and review the website.
                 </h2>
 
                 <p>
-                    We follow five clear stages so every project stays
-                    organized, tested, and open to improvement.
+                    We use these stages to organize our work and review what
+                    needs attention; feedback may lead us to revisit earlier steps.
                 </p>
 
             </div>
@@ -656,15 +654,16 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
                 </span>
 
                 <h2>
-                    Different Perspectives. <span>One Shared Direction.</span>
+                    Different Roles. <span>One Shared Direction.</span>
                 </h2>
 
                 <p>
-                    Our four specializations complement one another.
-                    Analysis shapes the plan, development builds it,
-                    documentation explains it, and management keeps
-                    everything on track. Together, they turn separate
-                    skills into one successful project.
+                    Our roles complement one another: systems analysis clarifies
+                    requirements, development implements the site, technical
+                    writing organizes information, and project management
+                    coordinates tasks and progress. Regular communication helps
+                    connect these contributions without losing sight of the
+                    group’s shared goals.
                 </p>
 
                 <ul class="strengths-chips" aria-label="Our specializations">
@@ -723,38 +722,33 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
             <div class="why-content" data-reveal="right">
 
                 <p>
-                    We created this portfolio to have one place where
-                    we can introduce ourselves, present our individual
-                    skills, and share the projects we have worked on.
-                    We believe that every member has something valuable
-                    to contribute and that our individual strengths
-                    become more meaningful when brought together.
+                    For members, DEVHUB provides an organized way to present
+                    individual backgrounds, skills, education, and project
+                    experience alongside the group’s work. It also gives us
+                    practice maintaining a shared digital portfolio and
+                    communicating our contributions clearly.
                 </p>
 
                 <p>
-                    Another reason for developing this website is to
-                    create a convenient way for people to learn more
-                    about our group. Through organized pages and
-                    individual portfolio sections, visitors can
-                    easily discover our backgrounds, interests,
-                    experiences, and accomplishments.
+                    For visitors, the site brings team and member information
+                    together in one place. Clear sections and links make it
+                    easier to learn about our roles and explore our projects
+                    without searching across separate sources.
                 </p>
 
                 <p>
-                    This project also allows us to document our
-                    learning experiences, highlight our progress,
-                    and demonstrate what we can accomplish through
-                    teamwork. It challenges us to apply our technical
-                    knowledge, improve our creativity, and develop
-                    practical skills in designing and building websites.
+                    Creating the portfolio also helps us apply classroom
+                    knowledge to a practical team project. We gain experience
+                    in planning, communication, content organization, WordPress
+                    development, review, and coordinating work across different
+                    responsibilities.
                 </p>
 
                 <p>
-                    Ultimately, this portfolio represents who we are,
-                    what we have learned, what we can do, and what
-                    we hope to achieve together. It is a reflection
-                    of our efforts, dedication, and continuous growth
-                    as learners and creators.
+                    The portfolio is a working record of what we choose to
+                    share about our learning and projects. As our experience
+                    develops, we can update it with relevant work and improve
+                    how we present it.
                 </p>
 
             </div>
@@ -781,8 +775,9 @@ $role_chips = array('Development', 'Documentation', 'Analysis', 'Management');
             </h2>
 
             <p data-reveal="up">
-                Meet our members and discover their individual talents,
-                skills, experiences, and creative works.
+                Explore DEVHUB GROUP PORTFOLIO to learn about our team,
+                visit individual portfolios, and discover the projects
+                we have worked on and explored.
             </p>
 
             <a

@@ -92,16 +92,12 @@
 
                 <ul class="menu-list">
 
-                    <?php foreach ($nav_items as $i => $item) : ?>
+                    <?php foreach ($nav_items as $item) : ?>
 
                         <li class="<?php echo $item['active'] ? 'current-menu-item' : ''; ?>">
 
                             <a href="<?php echo esc_url($item['url']); ?>"
                                <?php echo $item['active'] ? 'aria-current="page"' : ''; ?>>
-
-                                <span class="menu-num">
-                                    <?php echo esc_html(sprintf('%02d', $i + 1)); ?>
-                                </span>
 
                                 <?php echo esc_html($item['label']); ?>
 

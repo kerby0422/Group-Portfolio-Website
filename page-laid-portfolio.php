@@ -592,6 +592,8 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <span class="kp-label">PERSONAL PORTFOLIO / 2026</span>
 
+                <a class="kp-back-members" href="<?php echo esc_url(home_url('/our-members/')); ?>">Back to Our Members</a>
+
                 <span class="kp-hero-index">PROJECT_MANAGER_PROFILE_001</span>
 
             </div>
@@ -603,20 +605,16 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
                 <div class="kp-hero-content">
 
                     <div class="kp-hero-pretitle"><span>01.</span> INTRODUCTION</div>
-
-                    <h1 id="kp-hero-title">Hello, I'm <span>DhelayMae Laid.</span></h1>
+                    <h1 id="kp-hero-title">Hello, I'm <span>Dhelay Mae Laid.</span></h1>
 
                     <div class="kp-role"><span aria-hidden="true"></span> PROJECT MANAGER</div>
 
                     <p>
 
-                        I'm DhelayMae Laid, a student who values organization, teamwork, and
-
-                        collaboration. As a Project Manager, I focus on helping organize
-
-                        tasks, coordinate team responsibilities, monitor progress, and
-
-                        keep group projects aligned with their goals.
+                        I'm Dhelay Mae Laid, an IT student focused on project planning and
+                        team coordination. I help organize responsibilities, follow progress,
+                        and support clear communication so our group can work toward shared
+                        project goals.
 
                     </p>
 
@@ -654,7 +652,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                                 <img
 
-                                    src="<?php echo esc_url( $kp_images . 'dhelay.jpg' ); ?>"
+                                    src="<?php echo esc_url( $kp_images . 'Dhelay.jpg' ); ?>"
 
                                     alt="Portrait of Dhelay Mae Laid"
 
@@ -666,7 +664,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                                 <div class="kp-profile-photo-caption">
 
-                                    <strong>DhelayMae Laid</strong>
+                                    <strong>Dhelay Mae Laid</strong>
 
                                     <span>PROFILE.JPG</span>
 
@@ -678,9 +676,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                                 <p class="kp-code-comment">// A little introduction</p>
 
-                                <p><span class="kp-code-purple">const</span> <span class="kp-code-blue">developer</span> = <span class="kp-code-orange">{</span></p>
+                                <p><span class="kp-code-purple">const</span> <span class="kp-code-blue">projectManager</span> = <span class="kp-code-orange">{</span></p>
 
-                                <p class="kp-code-indent">name: <span class="kp-code-green">'DhelayMae Laid'</span>,</p>
+                                <p class="kp-code-indent">name: <span class="kp-code-green">'Dhelay Mae Laid'</span>,</p>
 
                                 <p class="kp-code-indent">focus: <span class="kp-code-green">'Project Management'</span>,</p>
 
@@ -754,25 +752,17 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <p>
 
-                    I'm <strong>DhelayMae Laid</strong>, a student with a strong interest in
-
-                    programming, technology, and digital development. I enjoy exploring
-
-                    how websites and applications work and discovering ways to create
-
-                    useful digital experiences.
+                    I'm <strong>Dhelay Mae Laid</strong>, an IT student interested in how
+                    teams plan and complete collaborative projects. I value clear goals,
+                    organized responsibilities, and steady communication throughout the work.
 
                 </p>
 
                 <p>
 
-                    Through my learning experiences, I continue to develop my technical
-
-                    abilities, creativity, and problem-solving skills. I believe that
-
-                    every project is an opportunity to apply what I have learned and
-
-                    discover something new.
+                    Group assignments give me opportunities to practice planning tasks,
+                    coordinating with classmates, and adapting when project needs change.
+                    These experiences help me understand the effort behind shared outcomes.
 
                 </p>
 
@@ -790,17 +780,14 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <p>
 
-                    My goal is to continue improving my leadership, communication, and
-
-                    organizational skills while gaining more experience in managing
-
-                    collaborative projects.
+                    I aim to improve my planning, communication, and progress-monitoring
+                    skills while learning more about coordinating student IT projects.
 
                 </p>
 
                 <div class="kp-about-facts">
 
-                    <div class="kp-fact"><span>FULL NAME</span><strong>DhelayMae Laid</strong></div>
+                    <div class="kp-fact"><span>FULL NAME</span><strong>Dhelay Mae Laid</strong></div>
 
                     <div class="kp-fact"><span>CURRENT ROLE</span><strong>Project Manager</strong></div>
 
@@ -940,7 +927,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <article class="kp-education-item"><span class="kp-education-year">2021 – 2022</span><h3>Senior High School</h3><p>Opol National Secondary Technical School</p></article>
 
-                <article class="kp-education-item"><span class="kp-education-year">2026 – 2027 Present</span><h3>Tertiary Education</h3><p>Opol Community College</p></article>
+                <article class="kp-education-item"><span class="kp-education-year">2026 – 2027 (Present; confirm date range)</span><h3>Tertiary Education</h3><p>Opol Community College</p></article>
 
             </div>
 
@@ -972,7 +959,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <div class="kp-project-image">
 
-                        <img src="<?php echo esc_url( $kp_images . 'Our.png' ); ?>" alt="OurSpace group portfolio website" loading="lazy" decoding="async">
+                        <img src="<?php echo esc_url( $kp_images . 'our.png' ); ?>" alt="DEVHUB GROUP PORTFOLIO website preview" loading="lazy" decoding="async">
 
                         <div class="kp-project-overlay"><span class="kp-project-category">WEB DEVELOPMENT</span><span class="kp-project-index">PROJECT_01</span></div>
 
@@ -980,9 +967,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN DEVELOPMENT</span></div>
 
-                        <h3>OurSpace Portfolio</h3>
+                        <h3>DEVHUB GROUP PORTFOLIO</h3>
 
                         <p>A group portfolio website that brings member profiles, individual skills, projects, and experiences together in one organized digital platform.</p>
 
@@ -998,25 +985,25 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <article class="kp-project-card">
 
-                    <div class="kp-project-image">
+                    <div class="kp-project-image project-image-showcase">
 
-                        <img src="<?php echo esc_url( $kp_images . 'smartcap.jpg' ); ?>" alt="SmartCap Alert medicine container prototype" loading="lazy" decoding="async">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'alub.png' ); ?>" alt="PTA Accounting and Membership System for Alubijid National Comprehensive High School" loading="lazy" decoding="async">
 
-                        <div class="kp-project-overlay"><span class="kp-project-category">INTERNET OF THINGS</span><span class="kp-project-index">PROJECT_02</span></div>
+                        <div class="kp-project-overlay"><span class="kp-project-category">WEB APPLICATION</span><span class="kp-project-index">PROJECT_02</span></div>
 
                     </div>
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN PROGRESS</span></div>
 
-                        <h3>SmartCap Alert</h3>
+                        <h3>PTA Accounting and Membership System</h3>
 
-                        <p>An IoT-based medicine container prototype designed to monitor container activity using a magnetic reed switch sensor and connected technology.</p>
+                        <p>A responsive system for managing PTA membership, student and guardian information, contributions, finances, announcements, and reports at Alubijid National Comprehensive High School.</p>
 
-                        <div class="kp-project-role"><strong>My role:</strong> Project Manager. Supporting task organization, team coordination, and progress monitoring throughout the research and prototype work.</div>
+                        <div class="kp-project-role"><strong>My role:</strong> Project Manager. Supporting task organization, team coordination, and progress monitoring during system development.</div>
 
-                        <div class="kp-project-stack"><span>ESP32</span><span>Arduino IDE</span><span>Blynk</span><span>IoT</span></div>
+                        <div class="kp-project-stack"><span>Membership</span><span>Contributions</span><span>Financial Records</span><span>Reports</span></div>
 
                     </div>
 
@@ -1026,25 +1013,25 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <article class="kp-project-card">
 
-                    <div class="kp-project-image">
+                    <div class="kp-project-image project-image-showcase project-image-app">
 
-                        <img src="<?php echo esc_url( $kp_images . 'agrisense.jpg' ); ?>" alt="AgriSense automatic irrigation project concept" loading="lazy" decoding="async">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'app.jpeg' ); ?>" alt="Pet Adoption Application" loading="lazy" decoding="async">
 
-                        <div class="kp-project-overlay"><span class="kp-project-category">SMART AGRICULTURE</span><span class="kp-project-index">PROJECT_03</span></div>
+                        <div class="kp-project-overlay"><span class="kp-project-category">PET ADOPTION</span><span class="kp-project-index">PROJECT_03</span></div>
 
                     </div>
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>MOBILE APPLICATION</span></div>
 
-                        <h3>AgriSense</h3>
+                        <h3>Pet Adoption Application</h3>
 
-                        <p>An ESP32-based irrigation project concept designed to support watering decisions through sensor monitoring and automated controls.</p>
+                        <p>A mobile application that helps prospective adopters discover pets and begin the adoption process.</p>
 
-                        <div class="kp-project-role"><strong>My role:</strong> Project Manager. Helping coordinate project activities and keep the group focused on its objectives.</div>
+                        <div class="kp-project-role"><strong>My role:</strong> Project Manager. Helping coordinate tasks and monitor progress during application development.</div>
 
-                        <div class="kp-project-stack"><span>ESP32</span><span>Sensors</span><span>Arduino IDE</span><span>IoT</span></div>
+                        <div class="kp-project-stack"><span>Laravel</span><span>React Native</span></div>
 
                     </div>
 
@@ -1070,7 +1057,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                         <p>Hands-on experiments involving ESP32 boards, electronic components, sensors, LED indicators, LCD displays, Wi-Fi connectivity, and IoT applications.</p>
 
-                        <div class="kp-project-role"><strong>Project involvement:</strong> This section can be updated if Dhelay has an individual project or a confirmed contribution to this work.</div>
+                        <div class="kp-project-role"><strong>Project context:</strong> This item represents individual ESP32 experiments and is separate from my project-management role in the group projects above.</div>
 
                         <div class="kp-project-stack"><span>ESP32</span><span>C++</span><span>Arduino IDE</span><span>Blynk</span></div>
 
@@ -1096,7 +1083,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
             <h2 class="kp-heading" id="kp-certificates-title">Learning beyond <span>the classroom.</span></h2>
 
-            <p class="kp-description">A space for certificates, seminars, workshops, recognitions, and other accomplishments throughout my academic and technical journey.</p>
+            <p class="kp-description">This section is reserved for verified certificates or learning milestones when there are items to share.</p>
 
             <div class="kp-certificate-box">
 
@@ -1108,9 +1095,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <h3>My Learning Journey</h3>
 
-                    <p>I continue to develop my knowledge through academic activities, hands-on projects, experimentation, and independent learning.</p>
+                    <p>I continue to learn through planning group tasks, coordinating responsibilities, communicating updates, and reflecting on how teams can work effectively.</p>
 
-                    <p>As I receive official certificates, attend seminars or workshops, or earn recognitions, I can add the actual details and certificate images here.</p>
+                    <p>No certificates or awards are listed here at this time. Verified details can be added when available.</p>
 
                 </div>
 
@@ -1122,17 +1109,49 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
 
 
+    <!-- MY APPROACH -->
+    <section class="kp-section kp-skills" id="kp-approach" aria-labelledby="kp-approach-title">
+        <div class="kp-container">
+            <div class="kp-section-header">
+                <span class="kp-label">06 / MY APPROACH</span>
+                <h2 class="kp-heading" id="kp-approach-title">How I keep projects <span>moving.</span></h2>
+                <p class="kp-description">A collaborative approach that helps the team stay organized, informed, and focused on shared goals.</p>
+            </div>
+            <div class="kp-skills-grid">
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">01 / PLAN</span><span class="kp-skill-symbol">01</span></div>
+                    <h3>Set priorities</h3>
+                    <p>I help clarify project goals, organize tasks, and agree on responsibilities and timelines.</p>
+                    <div class="kp-skill-tags"><span>Goals</span><span>Tasks</span><span>Schedules</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">02 / COORDINATE</span><span class="kp-skill-symbol">02</span></div>
+                    <h3>Keep the team aligned</h3>
+                    <p>I share updates, encourage communication, and help members coordinate their work.</p>
+                    <div class="kp-skill-tags"><span>Communication</span><span>Teamwork</span><span>Coordination</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">03 / MONITOR</span><span class="kp-skill-symbol">03</span></div>
+                    <h3>Track and adapt</h3>
+                    <p>I check progress with the team, follow up on tasks, and help adjust plans when priorities change.</p>
+                    <div class="kp-skill-tags"><span>Check-ins</span><span>Progress</span><span>Adaptability</span></div>
+                </article>
+            </div>
+            <p class="kp-description">My goal: help the team stay focused and make steady progress together.</p>
+        </div>
+    </section>
+
     <!-- CONTACT -->
-
     <section class="kp-contact" id="kp-contact" aria-labelledby="kp-contact-title">
-
         <div class="kp-container kp-contact-content">
 
-            <span class="kp-label">06 / LET'S CONNECT</span>
+            <span class="kp-label">07 / LET'S CONNECT</span>
 
             <h2 id="kp-contact-title">Strong teamwork turns plans<br>into <span>progress.</span></h2>
 
-            <p>Thank you for taking the time to explore my portfolio. I value collaboration, continuous learning, and the opportunity to help teams work toward shared goals.</p>
+            <p>Thank you for exploring my portfolio. I value collaboration, clear planning, and shared responsibility for group work. To contact our group, please use the DEVHUB contact page.</p>
+
+            <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="kp-button">CONTACT THROUGH DEVHUB <span class="kp-button-arrow" aria-hidden="true">↗</span></a>
 
         
 

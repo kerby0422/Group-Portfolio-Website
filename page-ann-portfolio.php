@@ -592,6 +592,8 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <span class="kp-label">PERSONAL PORTFOLIO / 2026</span>
 
+                <a class="kp-back-members" href="<?php echo esc_url(home_url('/our-members/')); ?>">Back to Our Members</a>
+
                 <span class="kp-hero-index">SYSTEM_ANALYST_PROFILE_001</span>
 
             </div>
@@ -610,13 +612,10 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <p>
 
-                        I'm Ann Jelie Dalde, a student interested in technology, problem-solving, and
-
-                        understanding how systems work. As a System Analyst, I focus on
-
-                        identifying user needs, analyzing processes, organizing information,
-
-                        and helping shape practical solutions for project requirements.
+                        I'm Ann Jelie Dalde, an IT student interested in systems analysis,
+                        requirements, and research. I work to understand the problem, organize
+                        the information a project needs, and help the team define solutions
+                        that respond to user needs.
 
                     </p>
 
@@ -754,18 +753,19 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <p>
 
-                    I'm <strong>Ann Jelie Dalde</strong>, a student with an interest in
-                    information systems, technology, and solving problems through careful
-                    analysis. I enjoy learning how people use digital tools and how systems
-                    can be organized to make tasks easier.
+                    I'm <strong>Ann Jelie Dalde</strong>, an IT student interested in
+                    information systems and how people use digital tools. I enjoy learning
+                    how a system’s structure and processes can support users and make tasks
+                    easier to understand.
 
                 </p>
 
                 <p>
 
-                    I am interested in understanding project requirements, gathering and
-                    organizing information, and identifying areas that can be improved.
-                    These activities help connect users' needs with possible system solutions.
+                    Through academic and group project work, I practice identifying
+                    requirements, reviewing processes, and organizing findings. This helps
+                    the team make decisions with a clearer understanding of the problem and
+                    the system being planned.
 
                 </p>
 
@@ -779,9 +779,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <p>
 
-                    My goal is to continue developing my analytical, documentation, and
-                    problem-solving abilities while learning more about systems analysis
-                    and information technology.
+                    I aim to strengthen my research, requirements analysis, and system
+                    documentation skills, and to learn more about how clearly defined
+                    requirements guide development.
 
                 </p>
 
@@ -928,19 +928,19 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
                 </article>
 
                 <article class="kp-education-item">
-                    <span class="kp-education-year">2022 – 2023</span>
+                    <span class="kp-education-year">2022 – 2023 (date needs verification)</span>
                     <h3>Cogon National High School</h3>
                     <p>Secondary Education</p>
                 </article>
 
                 <article class="kp-education-item">
-                    <span class="kp-education-year">2022 – 2023</span>
+                    <span class="kp-education-year">2022 – 2023 (date needs verification)</span>
                     <h3>Cogon National High School</h3>
                     <p>Senior High School</p>
                 </article>
 
                 <article class="kp-education-item">
-                    <span class="kp-education-year">2026 – 2027 Present</span>
+                    <span class="kp-education-year">2026 – 2027 (Present; confirm date range)</span>
                     <h3>Opol Community College</h3>
                     <p>Tertiary Education</p>
                 </article>
@@ -975,7 +975,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <div class="kp-project-image">
 
-                        <img src="<?php echo esc_url( $kp_images . 'Our.png' ); ?>" alt="OurSpace group portfolio website" loading="lazy" decoding="async">
+                        <img src="<?php echo esc_url( $kp_images . 'our.png' ); ?>" alt="DEVHUB GROUP PORTFOLIO website preview" loading="lazy" decoding="async">
 
                         <div class="kp-project-overlay"><span class="kp-project-category">WEB DEVELOPMENT</span><span class="kp-project-index">PROJECT_01</span></div>
 
@@ -983,9 +983,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN DEVELOPMENT</span></div>
 
-                        <h3>OurSpace Portfolio</h3>
+                        <h3>DEVHUB GROUP PORTFOLIO</h3>
 
                         <p>A group portfolio website that brings member profiles, individual skills, projects, and experiences together in one organized digital platform.</p>
 
@@ -1001,25 +1001,25 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <article class="kp-project-card">
 
-                    <div class="kp-project-image">
+                    <div class="kp-project-image project-image-showcase">
 
-                        <img src="<?php echo esc_url( $kp_images . 'smartcap.jpg' ); ?>" alt="SmartCap Alert medicine container prototype" loading="lazy" decoding="async">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'alub.png' ); ?>" alt="PTA Accounting and Membership System for Alubijid National Comprehensive High School" loading="lazy" decoding="async">
 
-                        <div class="kp-project-overlay"><span class="kp-project-category">INTERNET OF THINGS</span><span class="kp-project-index">PROJECT_02</span></div>
+                        <div class="kp-project-overlay"><span class="kp-project-category">WEB APPLICATION</span><span class="kp-project-index">PROJECT_02</span></div>
 
                     </div>
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>IN PROGRESS</span></div>
 
-                        <h3>SmartCap Alert</h3>
+                        <h3>PTA Accounting and Membership System</h3>
 
-                        <p>An IoT-based medicine container prototype designed to monitor container activity using a magnetic reed switch sensor and connected technology.</p>
+                        <p>A responsive system for managing PTA membership, student and guardian information, contributions, finances, announcements, and reports at Alubijid National Comprehensive High School.</p>
 
-                        <div class="kp-project-role"><strong>System Analyst focus:</strong> Reviewing the problem the prototype addresses, identifying expected system functions, and organizing the requirements for monitoring container activity.</div>
+                        <div class="kp-project-role"><strong>System Analyst focus:</strong> Organizing requirements for membership records, contribution tracking, financial monitoring, and role-based access.</div>
 
-                        <div class="kp-project-stack"><span>ESP32</span><span>Arduino IDE</span><span>Blynk</span><span>IoT</span></div>
+                        <div class="kp-project-stack"><span>Membership</span><span>Contributions</span><span>Financial Records</span><span>Reports</span></div>
 
                     </div>
 
@@ -1029,25 +1029,25 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                 <article class="kp-project-card">
 
-                    <div class="kp-project-image">
+                    <div class="kp-project-image project-image-showcase project-image-app">
 
-                        <img src="<?php echo esc_url( $kp_images . 'agrisense.jpg' ); ?>" alt="AgriSense automatic irrigation project concept" loading="lazy" decoding="async">
+                        <img class="project-image-contain" src="<?php echo esc_url( $kp_images . 'app.jpeg' ); ?>" alt="Pet Adoption Application" loading="lazy" decoding="async">
 
-                        <div class="kp-project-overlay"><span class="kp-project-category">SMART AGRICULTURE</span><span class="kp-project-index">PROJECT_03</span></div>
+                        <div class="kp-project-overlay"><span class="kp-project-category">PET ADOPTION</span><span class="kp-project-index">PROJECT_03</span></div>
 
                     </div>
 
                     <div class="kp-project-info">
 
-                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>2026</span></div>
+                        <div class="kp-project-meta"><span>GROUP PROJECT</span><span>MOBILE APPLICATION</span></div>
 
-                        <h3>AgriSense</h3>
+                        <h3>Pet Adoption Application</h3>
 
-                        <p>An ESP32-based irrigation project concept designed to support watering decisions through sensor monitoring and automated controls.</p>
+                        <p>A mobile application that helps prospective adopters discover pets and begin the adoption process.</p>
 
-                        <div class="kp-project-role"><strong>System Analyst focus:</strong> Understanding the irrigation problem, identifying the information and functions needed, and outlining how the system can support watering decisions.</div>
+                        <div class="kp-project-role"><strong>System Analyst focus:</strong> Identifying user needs and outlining requirements for pet profiles and adoption applications.</div>
 
-                        <div class="kp-project-stack"><span>ESP32</span><span>Sensors</span><span>Arduino IDE</span><span>IoT</span></div>
+                        <div class="kp-project-stack"><span>Laravel</span><span>React Native</span></div>
 
                     </div>
 
@@ -1073,7 +1073,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                         <p>Hands-on experiments involving ESP32 boards, electronic components, sensors, LED indicators, LCD displays, Wi-Fi connectivity, and IoT applications.</p>
 
-                        <div class="kp-project-role"><strong>Project involvement:</strong> Add Ann's individual system analysis work or confirmed contribution here when those details are available.</div>
+                        <div class="kp-project-role"><strong>Project context:</strong> This item represents individual ESP32 experiments and is separate from my systems-analysis focus in the group projects above.</div>
 
                         <div class="kp-project-stack"><span>ESP32</span><span>C++</span><span>Arduino IDE</span><span>Blynk</span></div>
 
@@ -1099,7 +1099,7 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
             <h2 class="kp-heading" id="kp-certificates-title">Learning beyond <span>the classroom.</span></h2>
 
-            <p class="kp-description">A space for certificates, seminars, workshops, recognitions, and other accomplishments throughout my academic and technical journey.</p>
+            <p class="kp-description">This section is reserved for verified certificates or learning milestones when there are items to share.</p>
 
             <div class="kp-certificate-box">
 
@@ -1111,9 +1111,9 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
                     <h3>My Learning Journey</h3>
 
-                    <p>I continue to develop my knowledge through academic activities, hands-on projects, experimentation, and independent learning.</p>
+                    <p>I continue to learn through research, requirements analysis, system documentation, and reviewing how project needs connect to proposed features.</p>
 
-                    <p>As I receive official certificates, attend seminars or workshops, or earn recognitions, I can add the actual details and certificate images here.</p>
+                    <p>No certificates or awards are listed here at this time. Verified details can be added when available.</p>
 
                 </div>
 
@@ -1125,17 +1125,49 @@ $kp_images = trailingslashit( get_stylesheet_directory_uri() ) . 'assets/images/
 
 
 
+    <!-- MY APPROACH -->
+    <section class="kp-section kp-skills" id="kp-approach" aria-labelledby="kp-approach-title">
+        <div class="kp-container">
+            <div class="kp-section-header">
+                <span class="kp-label">06 / MY APPROACH</span>
+                <h2 class="kp-heading" id="kp-approach-title">How I understand <span>systems.</span></h2>
+                <p class="kp-description">A user-focused analysis process for connecting a problem with clear system requirements.</p>
+            </div>
+            <div class="kp-skills-grid">
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">01 / DISCOVER</span><span class="kp-skill-symbol">01</span></div>
+                    <h3>Understand the problem</h3>
+                    <p>I consider the users, their needs, and the challenges the project is meant to address.</p>
+                    <div class="kp-skill-tags"><span>User needs</span><span>Research</span><span>Scope</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">02 / DEFINE</span><span class="kp-skill-symbol">02</span></div>
+                    <h3>Map requirements and flows</h3>
+                    <p>I organize findings into requirements and process flows that help the team understand what the system should do.</p>
+                    <div class="kp-skill-tags"><span>Requirements</span><span>Workflows</span><span>Documentation</span></div>
+                </article>
+                <article class="kp-skill-card">
+                    <div class="kp-skill-top"><span class="kp-skill-number">03 / VALIDATE</span><span class="kp-skill-symbol">03</span></div>
+                    <h3>Review the proposed solution</h3>
+                    <p>I check that the planned features respond to the identified needs and communicate gaps for the team to review.</p>
+                    <div class="kp-skill-tags"><span>Validation</span><span>Review</span><span>Communication</span></div>
+                </article>
+            </div>
+            <p class="kp-description">My goal: help turn user needs into thoughtful, clearly defined solutions.</p>
+        </div>
+    </section>
+
     <!-- CONTACT -->
-
     <section class="kp-contact" id="kp-contact" aria-labelledby="kp-contact-title">
-
         <div class="kp-container kp-contact-content">
 
-            <span class="kp-label">06 / LET'S CONNECT</span>
+            <span class="kp-label">07 / LET'S CONNECT</span>
 
             <h2 id="kp-contact-title">Good analysis turns questions<br>into <span>solutions.</span></h2>
 
-            <p>Thank you for exploring my portfolio. I value curiosity, clear communication, continuous learning, and the process of turning user needs into thoughtful system solutions.</p>
+            <p>Thank you for exploring my portfolio. I value careful research, clear requirements, and documentation that helps a team understand a system. To contact our group, please use the DEVHUB contact page.</p>
+
+            <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="kp-button">CONTACT THROUGH DEVHUB <span class="kp-button-arrow" aria-hidden="true">↗</span></a>
 
            
 

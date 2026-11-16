@@ -24,9 +24,10 @@ $members = array(
         'number' => '01',
         'name' => 'Kerby Talara',
         'image' => 'ker.jpg',
-        'position' => 'center 75%',
-        'role' => 'PROGRAMMER',
-        'description' => 'Responsible for developing, coding, and maintaining the website. Transforms ideas and designs into functional digital experiences through programming.',
+        'position' => 'center 50%',
+        'role' => 'WEB DEVELOPER / PROGRAMMER',
+        'skills' => array('WordPress', 'PHP', 'HTML / CSS'),
+        'description' => 'Builds and maintains the group website by turning agreed requirements and layouts into functional pages. Contributes programming work and checks that site features and navigation behave as intended.',
         'facebook' => 'https://www.facebook.com/kerby.villalobos.talara',
         'instagram' => 'https://www.instagram.com/kercby/',
         'portfolio' => '/ker-portfolio/'
@@ -34,11 +35,13 @@ $members = array(
 
     array(
         'number' => '02',
-        'name' => 'Clair Cabilao',
-        'image' => 'clair.jpg',
+        'name' => 'Claire Justine Cabilao',
+        'image' => 'calire.jpg',
+        'initials' => 'CC',
         'position' => 'center 30%',
-        'role' => 'TECH WRITER',
-        'description' => 'Responsible for preparing technical documentation, organizing project information, and explaining technical processes clearly and effectively.',
+        'role' => 'TECHNICAL WRITER',
+        'skills' => array('Technical Research', 'Content Organization', 'Documentation'),
+        'description' => 'Organizes project information and prepares clear documentation and website content. Helps the team explain its work, decisions, and processes in a consistent, understandable way.',
         'facebook' => 'https://www.facebook.com/claire.cabilao.2025?rdid=e6qCyTA00fNYEG7O&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EpM3HTbXU#',
         'instagram' => 'https://www.instagram.com/tfti.ne?rpxt=MTQ2c3c5OXN5anRpdg%3D%3D&fbclid=IwY2xjawVXmNFleHRuA2FlbQIxMABwZG9mBWJyaWQRMUdRUXpxRU5pT1lRR0JpcGJzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfA1xHMogHArq-NNJD09TKbw9MYcUkv_Oqk1e99mjXn_TMOsaySIdV319eZ_U_aem_NlGNgiyzOzUZTPG908oCAg',
         'portfolio' => '/clair-portfolio/'
@@ -48,9 +51,10 @@ $members = array(
         'number' => '03',
         'name' => 'Ann Jelie Dalde',
         'image' => 'ann.jpg',
-        'position' => 'center 85%',
-        'role' => 'ANALYST',
-        'description' => 'Responsible for analyzing project requirements, gathering information, identifying problems, and helping the team make informed decisions.',
+        'position' => 'center 75%',
+        'role' => 'SYSTEM ANALYST',
+        'skills' => array('Requirements Analysis', 'Systems Analysis', 'System Documentation'),
+        'description' => 'Studies the project requirements and the needs of its visitors, then helps define the site’s content structure and flow. Identifies gaps early so the team can make informed planning and development decisions.',
         'facebook' => 'https://www.facebook.com/annjelie.dalde.3',
         'instagram' => 'https://www.instagram.com/xoxo.jeil/?fbclid=IwY2xjawVXf6hleHRuA2FlbQIxMABwZG9mBWJyaWQRMUdRUXpxRU5pT1lRR0JpcGJzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfBAQpGURPeuHXbYO75hCkIbujU3fhMV-ziw9h4aRGJ3P1ILRSoeFfCgoGud8_aem_-35azWf2i6fhvEXC12jg9g',
         'portfolio' => '/ann-portfolio/'
@@ -59,10 +63,11 @@ $members = array(
     array(
         'number' => '04',
         'name' => 'Dhelay Mae Laid',
-        'image' => 'dhelay.jpg',
+        'image' => 'Dhelay.jpg',
         'position' => 'center 90%',
-        'role' => 'MANAGER',
-        'description' => 'Responsible for coordinating team activities, organizing tasks, monitoring project progress, and ensuring effective collaboration among members.',
+        'role' => 'PROJECT MANAGER',
+        'skills' => array('Project Planning', 'Team Coordination', 'Progress Monitoring'),
+        'description' => 'Organizes the group’s project activities by coordinating assignments, schedules, and progress updates. Helps members stay aligned on responsibilities and communicate as the work moves forward.',
         'facebook' => 'https://www.facebook.com/dm.laid?mibextid=wwXIfr&rdid=VNyhAH3shrQhRx1U&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KZDxhCbus%2F%3Fmibextid%3DwwXIfr#',
         'instagram' => 'https://www.instagram.com/laiflssse?rpxt=emVsa212cWl2ZXc5&utm_source=qr&fbclid=IwY2xjawVXdx9leHRuA2FlbQIxMABwZG9mBWJyaWQRMUdRUXpxRU5pT1lRR0JpcGJzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEf8iySb-4ZYNHlAxDC92KunDW9eNA2RZE3OS1sYf5p6NvopXrSqcy7OtyMofI_aem_SV_HVx4TapJmGv7WK6YKKw',
         'portfolio' => '/laid-portfolio/'
@@ -79,31 +84,31 @@ $workflow = array(
     array(
         'number' => '01',
         'title' => 'Planning and Organization',
-        'description' => 'We set the goal, divide responsibilities, and agree on a schedule so everyone knows what comes next.'
+        'description' => 'We agree on the project goal, organize the work into manageable tasks, assign responsibilities, and set a schedule that fits our student team.'
     ),
 
     array(
         'number' => '02',
         'title' => 'Research and Analysis',
-        'description' => 'We gather information, study the requirements, and find problems early, before anything is built.'
+        'description' => 'We identify the intended visitors, collect the information the site should present, and analyze requirements so the team can plan pages and features before implementation.'
     ),
 
     array(
         'number' => '03',
         'title' => 'Development and Implementation',
-        'description' => 'Plans and designs become a working result through code, content, and steady teamwork.'
+        'description' => 'We implement the planned pages and features, bringing together website code, prepared content, and the contributions of each assigned team role.'
     ),
 
     array(
         'number' => '04',
         'title' => 'Documentation',
-        'description' => 'We record processes, decisions, and results so the work stays clear and easy to maintain.'
+        'description' => 'We organize project information and record relevant requirements, decisions, and guidance so team members and visitors can understand the work.'
     ),
 
     array(
         'number' => '05',
         'title' => 'Review and Improvement',
-        'description' => 'We check the output together, gather feedback, and refine it until it meets our standards.'
+        'description' => 'We review the site together, check content and navigation, and use feedback to identify practical improvements for the next iteration.'
     )
 
 );
@@ -113,10 +118,10 @@ $workflow = array(
 ---------------------------------------- */
 
 $contributions = array(
-    'PROGRAMMER' => 'Turns plans and designs into a working website.',
-    'TECH WRITER' => 'Documents the work and explains it clearly.',
-    'ANALYST' => 'Studies requirements and spots problems early.',
-    'MANAGER' => 'Coordinates tasks and keeps the team on track.'
+    'WEB DEVELOPER / PROGRAMMER' => 'Implements and maintains the website pages and features.',
+    'TECHNICAL WRITER' => 'Organizes project information and communicates it through clear documentation.',
+    'SYSTEM ANALYST' => 'Clarifies requirements and helps plan the site’s structure and content flow.',
+    'PROJECT MANAGER' => 'Coordinates assignments, schedules, and progress across the team.'
 );
 
 /* ----------------------------------------
@@ -128,7 +133,7 @@ $members_js = get_stylesheet_directory() . '/assets/js/our-members.js';
 
 if (file_exists($members_js)) {
     wp_enqueue_script(
-        'ourspace-members',
+        'devhub-members',
         get_stylesheet_directory_uri() . '/assets/js/our-members.js',
         array(),
         filemtime($members_js),
@@ -158,10 +163,10 @@ if (file_exists($members_js)) {
                 </h1>
 
                 <p>
-                    Every great project starts with people who share
-                    ideas, creativity, and passion. Get to know the
-                    individuals behind our work and discover what
-                    each member brings to the group.
+                    We are four aspiring IT professionals bringing different
+                    skills together through DEVHUB. Meet the people behind our
+                    group portfolio and learn how each member contributes to
+                    our shared work.
                 </p>
 
                 <a href="#member-profiles" class="members-hero-button">
@@ -176,27 +181,18 @@ if (file_exists($members_js)) {
                 <div class="members-hero-circle circle-large"></div>
                 <div class="members-hero-circle circle-small"></div>
 
-                <div class="members-hero-card">
-
-                    <span class="members-card-label">
-                        OUR GROUP
-                    </span>
-
-                    <div class="members-card-number">
-                        <?php echo esc_html(sprintf('%02d', count($members))); ?>
-                    </div>
-
-                    <h3>
-                        Different people.
-                        One shared purpose.
-                    </h3>
-
-                    <div class="members-card-bottom">
-                        <span>INDIVIDUALITY</span>
-                        <span>TEAMWORK</span>
-                    </div>
-
-                </div>
+                <figure class="members-hero-card">
+                    <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/group.jpg'); ?>"
+                        alt="The DEVHUB team members together"
+                        fetchpriority="high"
+                        decoding="async"
+                    >
+                    <figcaption class="members-image-caption">
+                        <span>DEVHUB</span>
+                        <strong><?php echo esc_html(sprintf('%02d', count($members))); ?> MEMBERS · ONE TEAM</strong>
+                    </figcaption>
+                </figure>
 
                 <div class="members-floating-label">
                     <span class="members-floating-dot"></span>
@@ -244,17 +240,18 @@ if (file_exists($members_js)) {
             <div class="members-intro-content" data-reveal>
 
                 <p>
-                    We are a group of individuals with different
-                    interests, abilities, and experiences. Each
-                    member has something unique to offer, and
-                    together, we turn our ideas into meaningful
-                    projects and creative outputs.
+                    Our team brings together different responsibilities,
+                    skills, and perspectives. Development, technical writing,
+                    systems analysis, and project management each support a
+                    different part of our work, while collaboration helps us
+                    connect those contributions.
                 </p>
 
                 <p>
-                    Explore our profiles to learn more about us,
-                    discover our individual portfolios, and see
-                    the work that reflects our skills and growth.
+                    By sharing ideas, reviewing one another’s work, and
+                    learning throughout the process, we build our skills as
+                    individuals and as a team. Explore our profiles and
+                    individual portfolios to learn about our work.
                 </p>
 
             </div>
@@ -283,8 +280,8 @@ if (file_exists($members_js)) {
                 </div>
 
                 <p>
-                    Four individuals, different strengths,
-                    and countless opportunities to create.
+                    Meet four aspiring IT professionals and explore the
+                    responsibilities and skills each brings to DEVHUB.
                 </p>
 
             </div>
@@ -299,13 +296,16 @@ if (file_exists($members_js)) {
 
                         <div class="member-profile-image">
 
-                            <img
-                                src="<?php echo esc_url($theme_images . $member['image']); ?>"
-                                alt="<?php echo esc_attr($member['name']); ?> - Group member"
-                                style="object-position: <?php echo esc_attr($member['position']); ?>;"
-                                loading="lazy"
-                                decoding="async"
-                            >
+                            <?php if (!empty($member['image'])) : ?>
+                                <img
+                                    src="<?php echo esc_url($theme_images . $member['image']); ?>"
+                                    alt="<?php echo esc_attr($member['name'] . ' — ' . $member['role'] . ', DEVHUB team member'); ?>"
+                                    style="object-position: <?php echo esc_attr($member['position']); ?>;"
+                                    loading="lazy"
+                                    decoding="async">
+                            <?php else : ?>
+                                <span class="member-profile-placeholder" aria-hidden="true"><?php echo esc_html($member['initials']); ?></span>
+                            <?php endif; ?>
 
                             <span class="member-profile-number">
                                 <?php echo esc_html($member['number']); ?>
@@ -331,6 +331,12 @@ if (file_exists($members_js)) {
                                 <?php echo esc_html($member['description']); ?>
                             </p>
 
+                            <ul class="member-profile-skills" aria-label="<?php echo esc_attr($member['name']); ?>'s skills">
+                                <?php foreach ($member['skills'] as $skill) : ?>
+                                    <li><?php echo esc_html($skill); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+
                             <!-- SOCIAL MEDIA -->
 
                             <div class="member-social-links">
@@ -340,10 +346,9 @@ if (file_exists($members_js)) {
                                     href="<?php echo esc_url($member['facebook']); ?>"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="<?php echo esc_attr($member['name']); ?> on Facebook"
-                                >
+                                    aria-label="<?php echo esc_attr($member['name']); ?> on Facebook">
                                     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
-                                        <path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21h3z"/>
+                                        <path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21h3z" />
                                     </svg>
                                     Facebook
                                 </a>
@@ -353,12 +358,11 @@ if (file_exists($members_js)) {
                                     href="<?php echo esc_url($member['instagram']); ?>"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="<?php echo esc_attr($member['name']); ?> on Instagram"
-                                >
+                                    aria-label="<?php echo esc_attr($member['name']); ?> on Instagram">
                                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
-                                        <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
-                                        <circle cx="12" cy="12" r="4"/>
-                                        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/>
+                                        <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                                        <circle cx="12" cy="12" r="4" />
+                                        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
                                     </svg>
                                     Instagram
                                 </a>
@@ -370,8 +374,7 @@ if (file_exists($members_js)) {
                             <a
                                 href="<?php echo esc_url(home_url($member['portfolio'])); ?>"
                                 class="member-portfolio-link"
-                                aria-label="<?php echo esc_attr('View ' . $member['name'] . '\'s portfolio'); ?>"
-                            >
+                                aria-label="<?php echo esc_attr('View ' . $member['name'] . '\'s portfolio'); ?>">
                                 <span class="member-portfolio-text">View Portfolio</span>
                                 <span class="member-portfolio-icon" aria-hidden="true">&rarr;</span>
                             </a>
@@ -404,8 +407,8 @@ if (file_exists($members_js)) {
                 <h2>How we work together.</h2>
 
                 <p>
-                    Five steps guide every project we take on,
-                    from the first idea to the final result.
+                    Our five steps describe how we organize, develop, document,
+                    and review a student IT project from its initial plan onward.
                 </p>
 
             </div>
@@ -457,17 +460,18 @@ if (file_exists($members_js)) {
                 </h2>
 
                 <p>
-                    Planning, research, code, and documentation each
-                    come from a different person, yet they point to the
-                    same outcome: work that is clear, useful, and
-                    complete. Every idea and responsibility has a place,
-                    and the result belongs to all of us.
+                    The system analyst helps clarify requirements, the project
+                    manager coordinates tasks and progress, the web developer
+                    implements the site, and the technical writer organizes
+                    project information. We share updates, review the work, and
+                    take responsibility for the result together. DEVHUB reflects
+                    what we can achieve by combining our contributions and
+                    continuing to learn as a team.
                 </p>
 
                 <a
                     href="<?php echo esc_url(home_url('/our-projects/')); ?>"
-                    class="members-cta-button"
-                >
+                    class="members-cta-button">
                     Explore Our Projects
                     <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -509,7 +513,7 @@ if (file_exists($members_js)) {
                     </span>
 
                     <strong>
-                        A finished project we are proud to present together.
+                        A shared project shaped by every member’s contribution.
                     </strong>
 
                 </div>

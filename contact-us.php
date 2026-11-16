@@ -22,97 +22,122 @@ $form_values = array(
 
 // Show success message after redirect.
 if (
-    isset($_GET['contact_sent']) &&
-    sanitize_text_field(wp_unslash($_GET['contact_sent'])) === '1'
+    isset($_GET['devhub_contact_sent']) &&
+    is_string($_GET['devhub_contact_sent']) &&
+    sanitize_text_field(wp_unslash($_GET['devhub_contact_sent'])) === '1'
 ) {
     $form_success = true;
 }
 
 // Process contact form.
 if (
-    $_SERVER['REQUEST_METHOD'] === 'POST' &&
-    isset($_POST['ourspace_contact_submit'])
+    isset($_SERVER['REQUEST_METHOD']) &&
+    is_string($_SERVER['REQUEST_METHOD']) &&
+    'POST' === strtoupper(sanitize_text_field(wp_unslash($_SERVER['REQUEST_METHOD']))) &&
+    isset($_POST['devhub_contact_submit'])
 ) {
 
-    if (
-        !isset($_POST['ourspace_contact_nonce']) ||
+    $form_values['name'] = isset($_POST['contact_name']) && is_string($_POST['contact_name'])
+        ? sanitize_text_field(wp_unslash($_POST['contact_name']))
+        : '';
+
+    $form_values['email'] = isset($_POST['contact_email']) && is_string($_POST['contact_email'])
+        ? sanitize_email(wp_unslash($_POST['contact_email']))
+        : '';
+
+    $form_values['subject'] = isset($_POST['contact_subject']) && is_string($_POST['contact_subject'])
+        ? sanitize_text_field(wp_unslash($_POST['contact_subject']))
+        : '';
+
+    $form_values['message'] = isset($_POST['contact_message']) && is_string($_POST['contact_message'])
+        ? sanitize_textarea_field(wp_unslash($_POST['contact_message']))
+        : '';
+
+    $honeypot = isset($_POST['devhub_contact_website']) && is_string($_POST['devhub_contact_website'])
+        ? sanitize_text_field(wp_unslash($_POST['devhub_contact_website']))
+        : '';
+
+    if ($honeypot !== '') {
+        $form_values = array_fill_keys(array_keys($form_values), '');
+    } elseif (
+        !isset($_POST['devhub_contact_nonce']) ||
+        !is_string($_POST['devhub_contact_nonce']) ||
         !wp_verify_nonce(
-            sanitize_text_field(wp_unslash($_POST['ourspace_contact_nonce'])),
-            'ourspace_contact_action'
+            sanitize_text_field(wp_unslash($_POST['devhub_contact_nonce'])),
+            'devhub_contact_action'
         )
     ) {
         $form_error = 'Security verification failed. Please refresh the page and try again.';
 
     } else {
 
-        $form_values['name'] = isset($_POST['contact_name'])
-            ? sanitize_text_field(wp_unslash($_POST['contact_name']))
-            : '';
-
-        $form_values['email'] = isset($_POST['contact_email'])
-            ? sanitize_email(wp_unslash($_POST['contact_email']))
-            : '';
-
-        $form_values['subject'] = isset($_POST['contact_subject'])
-            ? sanitize_text_field(wp_unslash($_POST['contact_subject']))
-            : '';
-
-        $form_values['message'] = isset($_POST['contact_message'])
-            ? sanitize_textarea_field(wp_unslash($_POST['contact_message']))
-            : '';
-
         $name = $form_values['name'];
         $email = $form_values['email'];
         $subject = $form_values['subject'];
         $message = $form_values['message'];
 
-        if (
-            empty($name) ||
-            empty($email) ||
-            empty($subject) ||
-            empty($message)
-        ) {
-            $form_error = 'Please complete all required fields.';
+        if ($name === '' || $email === '' || $subject === '' || $message === '') {
+            $form_error = 'Please complete all required fields before sending your message.';
 
         } elseif (!is_email($email)) {
             $form_error = 'Please enter a valid email address.';
 
+        } elseif (
+            strlen($name) > 100 ||
+            strlen($email) > 254 ||
+            strlen($subject) > 150 ||
+            strlen($message) > 5000
+        ) {
+            $form_error = 'One or more fields exceed the allowed length. Please shorten your entry and try again.';
+
         } else {
+            $client_ip = isset($_SERVER['REMOTE_ADDR']) && is_string($_SERVER['REMOTE_ADDR'])
+                ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR']))
+                : 'unknown';
+            $rate_limit_key = 'devhub_contact_rate_' . md5(wp_hash($client_ip));
 
-            $mail_subject = 'OurSpace Contact: ' . $subject;
-
-            $mail_message =
-                "You received a new message from your OurSpace website.\n\n" .
-                "Name: " . $name . "\n" .
-                "Email: " . $email . "\n" .
-                "Subject: " . $subject . "\n\n" .
-                "Message:\n" . $message;
-
-            $headers = array(
-                'Reply-To: ' . $name . ' <' . $email . '>'
-            );
-
-            $sent = wp_mail(
-                $contact_email,
-                $mail_subject,
-                $mail_message,
-                $headers
-            );
-
-            if ($sent) {
-
-                $redirect_url = add_query_arg(
-                    'contact_sent',
-                    '1',
-                    get_permalink()
-                );
-
-                wp_safe_redirect($redirect_url . '#contact-form');
-                exit;
+            if (get_transient($rate_limit_key)) {
+                $form_error = 'A message was submitted recently. Please wait a minute before trying again.';
 
             } else {
+                set_transient($rate_limit_key, '1', MINUTE_IN_SECONDS);
 
-                $form_error = 'Message could not be sent. Please try again later.';
+                $safe_subject = preg_replace('/[\r\n]+/', ' ', $subject);
+                $mail_subject = 'DEVHUB Group Portfolio Contact: ' . $safe_subject;
+
+                $mail_message =
+                    "You received a new message through the DEVHUB Group Portfolio contact form.\n\n" .
+                    "Name: " . $name . "\n" .
+                    "Email: " . $email . "\n" .
+                    "Subject: " . $safe_subject . "\n\n" .
+                    "Message:\n" . $message;
+
+                $headers = array(
+                    'Reply-To: ' . $email
+                );
+
+                $sent = wp_mail(
+                    $contact_email,
+                    $mail_subject,
+                    $mail_message,
+                    $headers
+                );
+
+                if ($sent) {
+
+                    $redirect_url = add_query_arg(
+                        'devhub_contact_sent',
+                        '1',
+                        get_permalink()
+                    );
+
+                    wp_safe_redirect($redirect_url . '#contact-form');
+                    exit;
+
+                } else {
+                    delete_transient($rate_limit_key);
+                    $form_error = 'The message could not be sent from this site. Please try again later or email us using the address shown.';
+                }
             }
         }
     }
@@ -121,7 +146,7 @@ if (
 get_header();
 ?>
 
-<main class="ourspace-contact">
+<main class="devhub-contact">
 
     <!-- =====================================
          HERO
@@ -135,7 +160,7 @@ get_header();
 
                 <span class="contact-eyebrow">
                     <span class="contact-status-dot"></span>
-                    CONTACT / OURSPACE
+                    DEVHUB GROUP PORTFOLIO / CONTACT
                 </span>
 
                 <span class="contact-hero-index">
@@ -241,7 +266,7 @@ get_header();
             </div>
 
             <div class="contact-hero-footer">
-                <span>OURSPACE — GROUP PORTFOLIO</span>
+                <span>DEVHUB — GROUP PORTFOLIO</span>
                 <span>CONNECT. COLLABORATE. CREATE.</span>
             </div>
 
@@ -303,7 +328,7 @@ get_header();
                     </p>
 
                     <a
-                        href="mailto:<?php echo esc_attr($contact_email); ?>"
+                        href="<?php echo esc_url('mailto:' . $contact_email); ?>"
                         class="contact-card-link"
                     >
                         <span><?php echo esc_html($contact_email); ?></span>
@@ -351,14 +376,13 @@ get_header();
                     </div>
 
                     <span class="contact-card-label">
-                        EXPLORE OURSPACE
+                        EXPLORE DEVHUB
                     </span>
 
                     <h3>Our Community</h3>
 
                     <p>
-                        Discover the people, skills, experiences, and
-                        creative projects behind OurSpace.
+                        Discover the members, their individual portfolios, and the projects presented by DEVHUB Group Portfolio.
                     </p>
 
                     <div class="contact-card-links">
@@ -407,9 +431,10 @@ get_header();
                     </h2>
 
                     <p>
-                        Have something you'd like to discuss?
-                        Complete the form and your message will
-                        be sent directly to our OurSpace email.
+                        Have a question about our members or projects?
+                        Use the form to send your inquiry to DEVHUB Group Portfolio.
+                        We use the details you provide only to review and respond
+                        to your message. Responses may take time.
                     </p>
 
                     <div class="contact-form-contact">
@@ -418,14 +443,14 @@ get_header();
                             PREFERRED CONTACT
                         </span>
 
-                        <a href="mailto:<?php echo esc_attr($contact_email); ?>">
+                        <a href="<?php echo esc_url('mailto:' . $contact_email); ?>">
                             <?php echo esc_html($contact_email); ?>
                         </a>
 
                     </div>
 
                     <div class="contact-form-side-footer">
-                        <span>OURSPACE / CONTACT</span>
+                        <span>DEVHUB / CONTACT</span>
                         <span>EST. 2026</span>
                     </div>
 
@@ -461,8 +486,8 @@ get_header();
                             <strong>Message sent successfully!</strong>
 
                             <p>
-                                Thank you for contacting OurSpace.
-                                We have received your message.
+                                Your inquiry has been received by DEVHUB Group Portfolio.
+                                We will review it and respond when we can; replies may take time.
                             </p>
                         </div>
 
@@ -491,17 +516,28 @@ get_header();
 
                         <?php
                         wp_nonce_field(
-                            'ourspace_contact_action',
-                            'ourspace_contact_nonce'
+                            'devhub_contact_action',
+                            'devhub_contact_nonce'
                         );
                         ?>
 
                         <input
                             type="hidden"
-                            name="ourspace_contact_submit"
+                            name="devhub_contact_submit"
                             value="1"
                         >
 
+                        <div class="contact-honeypot" aria-hidden="true">
+                            <label for="devhub_contact_website">Leave this field empty</label>
+                            <input
+                                type="text"
+                                id="devhub_contact_website"
+                                name="devhub_contact_website"
+                                value=""
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+                        </div>
 
                         <!-- NAME AND EMAIL -->
 
@@ -594,7 +630,7 @@ get_header();
 
                         <button
                             type="submit"
-                            name="ourspace_contact_submit"
+                            name="devhub_contact_submit"
                             value="1"
                             class="contact-submit-button"
                         >
@@ -611,7 +647,7 @@ get_header();
                             </span>
 
                             <span>
-                                YOUR INFORMATION IS USED TO RESPOND TO YOUR INQUIRY.
+                                WE USE YOUR DETAILS TO REVIEW AND RESPOND; REPLIES MAY TAKE TIME.
                             </span>
 
                         </div>
@@ -620,6 +656,42 @@ get_header();
 
                 </div>
 
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="contact-faq" aria-labelledby="contact-faq-title">
+
+        <div class="contact-container">
+
+            <div class="contact-faq-heading">
+                <span class="contact-section-label">QUICK ANSWERS</span>
+                <h2 id="contact-faq-title">Frequently asked <span>questions.</span></h2>
+            </div>
+
+            <div class="contact-faq-list">
+                <details>
+                    <summary>What is DEVHUB Group Portfolio?</summary>
+                    <p>It is a shared website introducing the DEVHUB members and presenting their individual portfolios and group projects.</p>
+                </details>
+
+                <details>
+                    <summary>What projects can visitors explore?</summary>
+                    <p>Visitors can browse the group’s portfolio, the PTA Accounting and Membership System, the Pet Adoption Application, and Kerby Talara’s individual ESP32 experiments. Project stages and status are described on the projects page.</p>
+                </details>
+
+                <details>
+                    <summary>Can visitors ask questions about our projects?</summary>
+                    <p>Yes. Send a question through the contact form and include the project name so the team can understand your inquiry.</p>
+                </details>
+
+                <details>
+                    <summary>How can visitors contact the group?</summary>
+                    <p>Use the contact form on this page or the displayed group email address. Responses may take time.</p>
+                </details>
             </div>
 
         </div>
@@ -661,7 +733,7 @@ get_header();
             </div>
 
             <div class="contact-closing-footer">
-                <span>THANK YOU FOR VISITING OURSPACE.</span>
+                <span>THANK YOU FOR VISITING DEVHUB GROUP PORTFOLIO.</span>
                 <span>CONNECT WITH US ANYTIME.</span>
             </div>
 
@@ -675,39 +747,43 @@ get_header();
 <style>
 
 /* =========================================
-   OURSPACE CONTACT — DEVELOPER EDITION
+   DEVHUB GROUP PORTFOLIO CONTACT
 ========================================= */
 
-.ourspace-contact {
-    --c-black: #101010;
+.devhub-contact {
+    --c-black: #111111;
     --c-dark: #171717;
     --c-card: #1d1d1d;
     --c-orange: #f97316;
-    --c-orange-dark: #ea580c;
+    --c-orange-dark: #f97316;
     --c-cream: #f5f3ef;
     --c-white: #ffffff;
     --c-gray: #777777;
-    --c-border: #e7e3dc;
+    --c-border: #363636;
 
-    background: var(--c-cream);
-    color: var(--c-black);
+    background-color: var(--c-black);
+    background-image:
+        radial-gradient(ellipse at 90% 8%, rgba(249, 115, 22, .04), transparent 38rem),
+        radial-gradient(rgba(255, 255, 255, .035) .8px, transparent .8px);
+    background-size: auto, 28px 28px;
+    color: var(--c-white);
     overflow: hidden;
     font-family: inherit;
 }
 
-.ourspace-contact *,
-.ourspace-contact *::before,
-.ourspace-contact *::after {
+.devhub-contact *,
+.devhub-contact *::before,
+.devhub-contact *::after {
     box-sizing: border-box;
 }
 
-.ourspace-contact a {
+.devhub-contact a {
     text-decoration: none;
 }
 
-.ourspace-contact button,
-.ourspace-contact input,
-.ourspace-contact textarea {
+.devhub-contact button,
+.devhub-contact input,
+.devhub-contact textarea {
     font: inherit;
 }
 
@@ -735,12 +811,10 @@ get_header();
     padding: 35px 0 25px;
     overflow: hidden;
     background:
-        radial-gradient(
-            ellipse at 85% 45%,
-            rgba(249,115,22,.13),
-            transparent 38%
-        ),
-        var(--c-black);
+        radial-gradient(rgba(255, 255, 255, .05) .8px, transparent .8px),
+        radial-gradient(ellipse at 85% 45%, rgba(249, 115, 22, .055), transparent 38%),
+        linear-gradient(140deg, #101010, #171717 56%, #101010);
+    background-size: 28px 28px, auto, auto;
     color: white;
 }
 
@@ -748,12 +822,10 @@ get_header();
     content: "";
     position: absolute;
     inset: 0;
-    opacity: .13;
+    opacity: .1;
     pointer-events: none;
-    background-image:
-        linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
-    background-size: 55px 55px;
+    background-image: radial-gradient(rgba(255, 255, 255, .16) .8px, transparent .8px);
+    background-size: 28px 28px;
     mask-image: linear-gradient(to right, transparent, black);
 }
 
@@ -850,7 +922,7 @@ get_header();
 }
 
 .contact-primary-button:hover {
-    background: white;
+    background: #ff9a52;
     color: var(--c-black);
     transform: translateY(-4px);
 }
@@ -979,7 +1051,12 @@ get_header();
 
 .contact-details {
     padding: 110px 0 120px;
-    background: var(--c-cream);
+    background:
+        radial-gradient(rgba(255, 255, 255, .04) .8px, transparent .8px),
+        radial-gradient(ellipse at 12% 18%, rgba(249, 115, 22, .035), transparent 34%),
+        radial-gradient(ellipse at 88% 82%, rgba(255, 255, 255, .025), transparent 32%),
+        linear-gradient(140deg, #101010 0%, #171717 52%, #101010 100%);
+    background-size: 28px 28px, auto, auto, auto;
 }
 
 .contact-section-heading {
@@ -992,6 +1069,7 @@ get_header();
 
 .contact-section-heading h2 {
     margin: 20px 0 0;
+    color: var(--c-white);
     font-size: clamp(40px, 6vw, 65px);
     font-weight: 900;
     line-height: 1.03;
@@ -1005,7 +1083,7 @@ get_header();
 .contact-section-heading > p {
     max-width: 400px;
     margin: 0 0 8px;
-    color: #777;
+    color: #aaa;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -1022,14 +1100,16 @@ get_header();
     padding: 30px;
     overflow: hidden;
     border: 1px solid var(--c-border);
-    background: white;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(249, 115, 22, .07), transparent 42%),
+        linear-gradient(145deg, #202020, #151515 72%);
     transition: .3s ease;
 }
 
 .contact-info-card:hover {
     transform: translateY(-7px);
     border-color: var(--c-orange);
-    box-shadow: 0 18px 40px rgba(0,0,0,.06);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 0 24px rgba(249,115,22,.08);
 }
 
 .contact-info-top {
@@ -1053,7 +1133,7 @@ get_header();
 }
 
 .contact-info-number {
-    color: #d1cdc6;
+    color: #777;
     font-family: monospace;
     font-size: 11px;
 }
@@ -1067,6 +1147,7 @@ get_header();
 
 .contact-info-card h3 {
     margin: 12px 0;
+    color: #f5f3ef;
     font-size: 23px;
     font-weight: 900;
 }
@@ -1074,7 +1155,7 @@ get_header();
 .contact-info-card > p {
     max-width: 280px;
     min-height: 65px;
-    color: #777;
+    color: #aaa;
     font-size: 12px;
     line-height: 1.8;
 }
@@ -1086,7 +1167,7 @@ get_header();
     gap: 10px;
     margin-top: 22px;
     padding-top: 15px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #383838;
     color: var(--c-orange-dark);
     font-size: 11px;
     font-weight: 800;
@@ -1109,8 +1190,8 @@ get_header();
     justify-content: space-between;
     max-width: 220px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
-    color: #444;
+    border-bottom: 1px solid #383838;
+    color: #ddd;
     font-size: 11px;
     font-weight: 800;
     transition: .2s;
@@ -1131,7 +1212,12 @@ get_header();
 
 .contact-form-section {
     padding: 115px 0;
-    background: white;
+    background:
+        radial-gradient(rgba(255, 255, 255, .04) .8px, transparent .8px),
+        radial-gradient(ellipse at 8% 42%, rgba(249, 115, 22, .035), transparent 35%),
+        radial-gradient(ellipse at 92% 70%, rgba(255, 255, 255, .025), transparent 32%),
+        linear-gradient(145deg, #101010, #171717 52%, #101010);
+    background-size: 28px 28px, auto, auto, auto;
 }
 
 .contact-form-layout {
@@ -1149,6 +1235,7 @@ get_header();
 
 .contact-form-intro h2 {
     margin: 25px 0;
+    color: var(--c-white);
     font-size: clamp(46px, 6vw, 70px);
     font-weight: 900;
     line-height: .98;
@@ -1161,7 +1248,7 @@ get_header();
 
 .contact-form-intro > p {
     max-width: 390px;
-    color: #777;
+    color: #a5a5a5;
     font-size: 13px;
     line-height: 1.9;
 }
@@ -1173,7 +1260,9 @@ get_header();
     margin-top: 40px;
     padding: 20px;
     border-left: 3px solid var(--c-orange);
-    background: var(--c-cream);
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(249, 115, 22, .08), transparent 44%),
+        linear-gradient(145deg, #202020, #151515 72%);
 }
 
 .contact-form-contact-label {
@@ -1184,7 +1273,7 @@ get_header();
 }
 
 .contact-form-contact a {
-    color: #222;
+    color: #f5f3ef;
     font-size: 12px;
     font-weight: 800;
     overflow-wrap: anywhere;
@@ -1196,7 +1285,7 @@ get_header();
     gap: 10px;
     margin-top: 60px;
     padding-top: 18px;
-    border-top: 1px solid #e8e5df;
+    border-top: 1px solid #383838;
     color: #999;
     font-family: monospace;
     font-size: 9px;
@@ -1207,8 +1296,10 @@ get_header();
 
 .contact-form-wrapper {
     padding: 38px;
-    border: 1px solid #e8e5df;
-    background: var(--c-cream);
+    border: 1px solid #383838;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(249, 115, 22, .07), transparent 42%),
+        linear-gradient(145deg, #202020, #151515 72%);
 }
 
 .contact-form-top {
@@ -1218,7 +1309,7 @@ get_header();
     gap: 20px;
     padding-bottom: 25px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #dedad2;
+    border-bottom: 1px solid #383838;
 }
 
 .contact-form-top-label {
@@ -1230,15 +1321,15 @@ get_header();
 
 .contact-form-top h3 {
     margin: 10px 0 0;
-    color: #171717;
+    color: #f5f3ef;
     font-size: 25px;
     font-weight: 900;
 }
 
 .contact-form-code {
     padding: 8px 10px;
-    background: #eae6df;
-    color: #777;
+    background: #111;
+    color: #aaa;
     font-family: monospace;
     font-size: 9px;
 }
@@ -1259,15 +1350,15 @@ get_header();
 }
 
 .contact-success {
-    border-color: #24834a;
-    background: #e8f5ec;
-    color: #246b3b;
+    border-color: var(--c-orange);
+    background: #292016;
+    color: #ffd2ad;
 }
 
 .contact-error {
-    border-color: #d34d24;
-    background: #fff0e8;
-    color: #a33b13;
+    border-color: var(--c-orange);
+    background: #2a1b13;
+    color: #ffd2ad;
 }
 
 
@@ -1287,7 +1378,7 @@ get_header();
 
 .contact-input-group label {
     margin-bottom: 10px;
-    color: #333;
+    color: #e4e4e4;
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 1.2px;
@@ -1301,11 +1392,11 @@ get_header();
 .contact-input-group textarea {
     width: 100%;
     padding: 16px;
-    border: 1px solid #dedad2;
+    border: 1px solid #414141;
     border-radius: 0;
     outline: none;
-    background: white;
-    color: #222;
+    background: #111;
+    color: #f5f3ef;
     font-family: inherit;
     font-size: 12px;
     transition: .25s ease;
@@ -1374,6 +1465,75 @@ get_header();
     color: var(--c-orange-dark);
 }
 
+.contact-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.contact-faq {
+    padding: 85px 0;
+    background:
+        radial-gradient(rgba(255, 255, 255, .04) .8px, transparent .8px),
+        radial-gradient(ellipse at 82% 44%, rgba(249, 115, 22, .035), transparent 36%),
+        linear-gradient(140deg, #101010, #171717 56%, #101010);
+    background-size: 28px 28px, auto, auto;
+}
+
+.contact-faq-heading {
+    margin-bottom: 30px;
+}
+
+.contact-faq-heading h2 {
+    margin: 15px 0 0;
+    color: var(--c-white);
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.contact-faq-heading h2 span {
+    color: var(--c-orange-dark);
+}
+
+.contact-faq-list {
+    max-width: 850px;
+    border-top: 1px solid #383838;
+}
+
+.contact-faq-list details {
+    padding: 18px 0;
+    border-bottom: 1px solid #383838;
+}
+
+.contact-faq-list summary {
+    color: #f5f3ef;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.contact-faq-list summary:hover,
+.contact-faq-list details[open] summary {
+    color: var(--c-orange-dark);
+}
+
+.contact-faq-list p {
+    max-width: 720px;
+    margin: 12px 0 0;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
 
 /* =========================================
    CLOSING SECTION
@@ -1381,7 +1541,11 @@ get_header();
 
 .contact-closing {
     padding: 75px 0 30px;
-    background: var(--c-orange);
+    background:
+        radial-gradient(rgba(255, 255, 255, .045) .8px, transparent .8px),
+        radial-gradient(ellipse at 85% 15%, rgba(249, 115, 22, .07), transparent 38%),
+        linear-gradient(140deg, #171717, #202020 55%, #141414);
+    background-size: 28px 28px, auto, auto;
 }
 
 .contact-closing-top,
@@ -1396,8 +1560,8 @@ get_header();
 
 .contact-closing-top {
     padding-bottom: 22px;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    color: #4c2b18;
+    border-bottom: 1px solid #383838;
+    color: #999;
 }
 
 .contact-closing-content {
@@ -1409,7 +1573,7 @@ get_header();
 }
 
 .contact-closing-kicker {
-    color: #4c2b18;
+    color: var(--c-orange);
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 2px;
@@ -1417,7 +1581,7 @@ get_header();
 
 .contact-closing h2 {
     margin: 22px 0 0;
-    color: var(--c-black);
+    color: #f5f3ef;
     font-size: clamp(42px, 7vw, 80px);
     font-weight: 900;
     line-height: 1;
@@ -1425,7 +1589,7 @@ get_header();
 }
 
 .contact-closing h2 span {
-    color: white;
+    color: var(--c-orange);
 }
 
 .contact-closing-content > a {
@@ -1435,6 +1599,7 @@ get_header();
     gap: 35px;
     min-width: 225px;
     padding: 17px 20px;
+    border: 1px solid rgba(249, 115, 22, .35);
     background: var(--c-black);
     color: white;
     font-size: 9px;
@@ -1444,7 +1609,7 @@ get_header();
 }
 
 .contact-closing-content > a:hover {
-    background: white;
+    background: var(--c-orange);
     color: var(--c-black);
 }
 
@@ -1454,8 +1619,8 @@ get_header();
 
 .contact-closing-footer {
     padding-top: 20px;
-    border-top: 1px solid rgba(0,0,0,.2);
-    color: #4c2b18;
+    border-top: 1px solid #383838;
+    color: #999;
 }
 
 
@@ -1463,10 +1628,11 @@ get_header();
    ACCESSIBILITY
 ========================================= */
 
-.ourspace-contact a:focus-visible,
-.ourspace-contact button:focus-visible,
-.ourspace-contact input:focus-visible,
-.ourspace-contact textarea:focus-visible {
+.devhub-contact a:focus-visible,
+.devhub-contact button:focus-visible,
+.devhub-contact input:focus-visible,
+.devhub-contact textarea:focus-visible,
+.devhub-contact summary:focus-visible {
     outline: 2px solid var(--c-orange-dark);
     outline-offset: 4px;
 }
@@ -1640,9 +1806,9 @@ get_header();
 
 @media (prefers-reduced-motion: reduce) {
 
-    .ourspace-contact *,
-    .ourspace-contact *::before,
-    .ourspace-contact *::after {
+    .devhub-contact *,
+    .devhub-contact *::before,
+    .devhub-contact *::after {
         scroll-behavior: auto !important;
         transition-duration: .01ms !important;
         animation-duration: .01ms !important;
